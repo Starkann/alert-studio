@@ -13,7 +13,7 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Capsules vidéo pour organismes Qualiopi, 690 € HT | Alert Studio">
 <meta property="og:description" content="Capsules animées de 60 secondes pour les organismes de formation certifiés Qualiopi : 690 € HT, livrées en 7 jours ouvrés. Aperçu gratuit.">
-https://starkann.github.io/alert-studio/assets/posters/ia-16x9.jpg">
+<meta property="og:image" content="https://starkann.github.io/alert-studio/assets/posters/ia-16x9.jpg">
 <link rel="icon" type="image/png" href="assets/brand/logo-icone.png">
 <link rel="apple-touch-icon" href="assets/brand/logo-icone.png">
 <link rel="preload" as="image" href="assets/posters/ia-16x9.jpg" fetchpriority="high">
@@ -123,7 +123,7 @@ section{position:relative}
 .hero{padding-block:clamp(12px,2vh,24px) clamp(28px,4vh,48px);text-align:center}
 .eyebrow{color:var(--ink-2);margin-bottom:8px}
 @media (max-width:479px){.eyebrow{font-family:var(--ff);font-size:.8125rem;font-weight:560;white-space:nowrap}}
-.hero h1{font-size:clamp(2.2rem,1.25rem + 2.7vw,3.3rem);line-height:1.05;max-width:22ch;margin-inline:auto}
+.hero h1{font-size:clamp(2.75rem,1.6rem + 3.6vw,4.25rem);line-height:1.02;max-width:16ch;margin-inline:auto}
 .lede{margin:8px auto 0;font-size:1rem;line-height:1.45;color:var(--ink-2);max-width:52rem}
 @media (min-width:768px){.lede{font-size:1.1875rem}}
 @media (min-width:1024px){.hero h1{max-width:none}}
@@ -208,7 +208,7 @@ section{position:relative}
 /* Scene de l'en-tete : taille fixe, adaptee a l'ecran */
 .hero .player{width:100%}
 .hero .scene{aspect-ratio:16/9}
-@media (max-width:379px){.hero h1{font-size:2rem}.hero .eyebrow{display:none}}
+@media (max-width:379px){.hero h1{font-size:2.4rem}.hero .eyebrow{display:none}}
 @media (min-width:768px){
   .hero .player{width:min(100%,960px,max(560px,(100vh - 360px) * 16 / 9));width:min(100%,960px,max(560px,(100svh - 360px) * 16 / 9))}
   .hero .scene{height:auto;aspect-ratio:16/9}
@@ -526,6 +526,7 @@ section{position:relative}
 @media (max-width:767px){.foot-in{display:grid;grid-template-columns:auto 1fr;gap:4px 14px}.foot-in picture{margin-right:0}.foot-in>a{grid-column:1 / -1}}
 .foot a{display:inline-flex;align-items:center;min-height:44px}
 .mentions{margin-top:12px;color:var(--ink-3)}
+#reserver{scroll-margin-top:calc(var(--nav-h) + 24px)}
 
 /* ---------- Apparitions ---------- */
 @media (prefers-reduced-motion:no-preference){
@@ -561,9 +562,8 @@ section{position:relative}
   <section class="hero" id="top" aria-labelledby="h-hero">
     <div class="wrap">
       <div class="hero-in">
-        <p class="eyebrow mono">Pour les organismes de formation certifiés Qualiopi</p>
         <h1 id="h-hero">Vos formations, comprises en <span class="hl" style="--d:.5s">60&nbsp;secondes</span>.</h1>
-        <p class="lede">Une capsule animée qui rend votre formation claire, et donne envie de s’y inscrire.</p>
+        <p class="lede">Claire pour vos stagiaires, convaincante pour vos prospects.</p>
 
         <figure class="player" data-player data-dur="0:47" data-l="assets/ia-16x9.mp4" data-p="assets/ia-9x16.mp4">
           <div class="scene">
@@ -933,7 +933,7 @@ section{position:relative}
       <div class="final-copy">
         <h2 id="h-final" class="rv">Donnez-moi une formation. Je vous montre à quoi ressemblerait <span class="hl">sa vidéo</span>.</h2>
         <p>Vous recevez par e-mail les premières phrases du script et une image de votre capsule, à vos couleurs. Gratuit, sans appel commercial.</p>
-        <p>L’aperçu vous plaît&nbsp;? Vous réservez 20&nbsp;minutes, quand vous voulez. Sinon, on en reste là.</p>
+        <p>L’aperçu vous plaît&nbsp;? Vous <a href="#reserver">réservez 20&nbsp;minutes</a>, quand vous voulez. Sinon, on en reste là.</p>
         <p class="direct">Me contacter directement par mail&nbsp;: <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a></p>
       </div>
       <div class="final-side">
