@@ -133,6 +133,9 @@ section{position:relative}
 .hero-go{display:grid;justify-items:center;gap:6px;width:100%}
 .hero-cta .btn{width:100%}
 .hero .figcap{display:none}
+.hero .offer-cap{margin:10px 0 2px;font-size:.9375rem;line-height:1.4;color:var(--ink);text-align:center}
+.hero .offer-cap strong{font-weight:700}
+@media (min-width:768px){.hero .offer-cap{font-size:1rem}}
 .d-only{display:none}
 @media (min-width:768px){
   .hero-cta{flex-direction:row;justify-content:center;align-items:flex-start;gap:24px}
@@ -576,6 +579,7 @@ section{position:relative}
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
+          <p class="offer-cap"><strong>Ce que vous recevez pour 690&nbsp;€&nbsp;HT</strong>&nbsp;: une vidéo comme celle-ci, d’environ une minute.</p>
           <div class="ctrls">
             <button class="cbtn" type="button" data-act="play" aria-label="Lire"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
@@ -590,7 +594,7 @@ section{position:relative}
               <a class="link-arrow m-only" href="#exemples">Voir les exemples <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
             </div>
           </div>
-          <figcaption class="figcap mono"><span>Présentation d’Alert Studio, 1&nbsp;min&nbsp;04, faite avec la méthode des capsules. Aperçu par e-mail, sans appel commercial.</span><a class="link-arrow d-only" href="#exemples">Voir les exemples <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a></figcaption>
+          <figcaption class="figcap mono"><a class="link-arrow d-only" href="#exemples">Voir les exemples <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a></figcaption>
         </figure>
       </div>
     </div>
