@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://starkann.github.io/alert-studio/sitemap.xml

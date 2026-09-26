@@ -6,23 +6,24 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F4F6F8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141410" media="(prefers-color-scheme: dark)">
-<title>Capsules vidéo pour organismes Qualiopi, 690 € HT | Alert Studio</title>
-<meta name="description" content="Capsules animées de 60 secondes pour les organismes de formation certifiés Qualiopi : 690 € HT, livrées en 7 jours ouvrés, en paysage et en vertical. Aperçu gratuit.">
-<meta name="robots" content="noindex, nofollow">
+<title>Capsules vidéo pour organismes Qualiopi, 690 € | Alert Studio</title>
+<meta name="description" content="Capsules animées de 60 secondes pour les organismes de formation certifiés Qualiopi : 690 €, livrées en 7 jours ouvrés, en paysage et en vertical. Aperçu gratuit.">
+<link rel="canonical" href="https://starkann.github.io/alert-studio/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://starkann.github.io/alert-studio/">
+<meta property="og:site_name" content="Alert Studio">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Capsules vidéo pour organismes Qualiopi, 690 € HT | Alert Studio">
-<meta property="og:description" content="Capsules animées de 60 secondes pour les organismes de formation certifiés Qualiopi : 690 € HT, livrées en 7 jours ouvrés. Aperçu gratuit.">
+<meta property="og:title" content="Capsules vidéo pour organismes Qualiopi, 690 € | Alert Studio">
+<meta property="og:description" content="Capsules animées de 60 secondes pour les organismes de formation certifiés Qualiopi : 690 €, livrées en 7 jours ouvrés. Aperçu gratuit.">
 <meta property="og:image" content="https://starkann.github.io/alert-studio/assets/posters/alert-16x9.jpg">
 <link rel="icon" type="image/png" href="assets/brand/logo-icone.png">
 <link rel="apple-touch-icon" href="assets/brand/logo-icone.png">
 <link rel="preload" as="image" href="assets/posters/alert-16x9.jpg" fetchpriority="high">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/BricolageGrotesque-300-800-latin.woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/fonts/phosphor-regular.css">
+<link rel="stylesheet" href="assets/fonts/phosphor-fill.css">
 <style>
 /* Synthese (p5) : DA Surligneur (p4) sur la palette du logo.
    Encre #141410, papier froid #F4F6F8, un seul orange #FC4C14 (logo) pour boutons, surlignage et reperes.
@@ -338,6 +339,7 @@ section{position:relative}
 .offer-c .quote{font-family:var(--fm);font-size:1rem;color:var(--ink-2)}
 .offer-c p{color:var(--ink-2)}
 .offer-c .link-arrow{align-self:flex-start}
+.tva{margin-top:14px;font-size:.8125rem;color:var(--ink-3)}
 @media (min-width:1024px){
   .offers{grid-template-columns:7fr 5fr}
   .offer{padding:34px}
@@ -520,6 +522,12 @@ section{position:relative}
 .status i{font-size:22px;line-height:1.2}
 .status small{grid-column:2;font-family:var(--fm);font-weight:400;font-size:.78125rem;color:var(--ink-3)}
 .status[hidden]{display:none}
+.status-err{border-color:var(--err);color:var(--err)}
+.status-err a{color:inherit;font-weight:700;overflow-wrap:anywhere}
+.help a{color:inherit}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form{position:relative}
+.form .btn[aria-busy="true"]{opacity:.7;cursor:progress}
 @media (min-width:1024px){.final-in{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:72px;align-items:start}.form{padding:32px}.final-copy{position:sticky;top:calc(var(--nav-h) + 32px)}}
 
 /* ---------- Pied de page ---------- */
@@ -581,7 +589,7 @@ section{position:relative}
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
-          <p class="offer-cap"><strong>Ce que vous recevez pour 690&nbsp;€&nbsp;HT</strong>&nbsp;: une vidéo comme <span style="white-space:nowrap">celle-ci</span>, d’environ une minute.</p>
+          <p class="offer-cap"><strong>Ce que vous recevez pour 690&nbsp;€</strong>&nbsp;: une vidéo comme <span style="white-space:nowrap">celle-ci</span>, d’environ une minute.</p>
           <div class="ctrls">
             <button class="cbtn" type="button" data-act="play" aria-label="Lire"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
@@ -605,7 +613,7 @@ section{position:relative}
   <!-- Prix et delai -->
   <section class="facts" aria-label="Prix et délai">
     <div class="wrap facts-in">
-      <p class="fact"><span class="fact-big"><span class="hl hl-low">690&nbsp;€&nbsp;HT</span></span><span class="fact-sub bot">la capsule de 60&nbsp;s.</span></p>
+      <p class="fact"><span class="fact-big"><span class="hl hl-low">690&nbsp;€</span></span><span class="fact-sub bot">la capsule de 60&nbsp;s.</span></p>
       <p class="fact"><span class="fact-sub top">Livrée en</span><span class="fact-big">7&nbsp;jours ouvrés.</span></p>
       <p class="fact-txt">De votre côté&nbsp;: un appel de 20&nbsp;minutes et une validation du script.</p>
     </div>
@@ -636,7 +644,7 @@ section{position:relative}
             </div>
             <div class="slip slip-us">
               <p class="slip-k mono">Alert Studio</p>
-              <p class="slip-v">690&nbsp;€&nbsp;HT, affiché.</p>
+              <p class="slip-v">690&nbsp;€, affiché.</p>
               <p class="slip-d">Livrée en 7&nbsp;jours ouvrés. Retouches et droits illimités compris, acompte remboursé si le script ne vous plaît pas.</p>
             </div>
           </div>
@@ -668,11 +676,11 @@ section{position:relative}
       <div class="offers">
         <article class="offer offer-a rv" aria-labelledby="o-presenter">
           <div class="offer-top"><h3 id="o-presenter">Présenter</h3><p class="mono">jusqu’à 60&nbsp;secondes</p></div>
-          <p class="price"><span class="hl hl-low">690</span><small>€ HT</small></p>
+          <p class="price"><span class="hl hl-low">690</span><small>€</small></p>
           <p class="desc">Pour vos prospects&nbsp;: qu’ils comprennent, et qu’ils s’inscrivent.</p>
           <p class="desc muted">Sur votre fiche formation, en salon, en relance de devis.</p>
           <div class="pack">
-            <p><strong>Pack catalogue&nbsp;: 5&nbsp;vidéos pour 2&#8239;990&nbsp;€&nbsp;HT</strong> (598&nbsp;€&nbsp;HT la vidéo).</p>
+            <p><strong>Pack catalogue&nbsp;: 5&nbsp;vidéos pour 2&#8239;990&nbsp;€</strong> (598&nbsp;€ la vidéo).</p>
             <p>La première en 7&nbsp;jours ouvrés, puis une par semaine. 5&nbsp;vidéos au prix d’une seule chez le studio le plus cher de mon relevé.</p>
           </div>
           <div class="go">
@@ -681,7 +689,7 @@ section{position:relative}
         </article>
         <article class="offer offer-b rv" aria-labelledby="o-expliquer">
           <div class="offer-top"><h3 id="o-expliquer">Expliquer</h3><p class="mono">jusqu’à 90&nbsp;secondes</p></div>
-          <p class="price">1&#8239;290<small>€ HT</small></p>
+          <p class="price">1&#8239;290<small>€</small></p>
           <p class="desc">Pour vos stagiaires&nbsp;: qu’ils comprennent, et qu’ils retiennent.</p>
           <p class="desc muted">À envoyer avant la session, à revoir après. Une règle, un geste ou un outil. Script vérifié, source réglementaire citée à l’écran si besoin.</p>
           <div class="go">
@@ -697,6 +705,7 @@ section{position:relative}
         <p>Une série, un module e-learning, une autre durée.</p>
         <a class="link-arrow" href="#reserver">Échanger sur votre projet <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
       </article>
+      <p class="tva mono">Prix nets&nbsp;: TVA non applicable, art.&nbsp;293&nbsp;B du CGI.</p>
 
       <div class="included rv">
         <h3>Compris dans chaque capsule. Rien ne s’ajoute.</h3>
@@ -779,7 +788,7 @@ section{position:relative}
         </figure>
         <div class="ex-meta">
           <h3>Parcours CACES R489</h3>
-          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">40&nbsp;s</span><span class="tag">690&nbsp;€&nbsp;HT</span><span class="tag">Fiche formation</span></p>
+          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">40&nbsp;s</span><span class="tag">690&nbsp;€</span><span class="tag">Fiche formation</span></p>
         </div>
       </article>
 
@@ -808,7 +817,7 @@ section{position:relative}
         </figure>
         <div class="ex-meta">
           <h3>Vérifier avant de croire&nbsp;: l’IA au travail</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€&nbsp;HT</span><span class="tag">Avant la session</span></p>
+          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span><span class="tag">Avant la session</span></p>
         </div>
       </article>
 
@@ -943,7 +952,12 @@ section{position:relative}
         <p class="direct">Me contacter directement par mail&nbsp;: <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a></p>
       </div>
       <div class="final-side">
-      <form class="form" id="form" novalidate>
+      <form class="form" id="form" novalidate action="https://formsubmit.co/hugopilardece@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Alert Studio : demande d’aperçu gratuit">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://starkann.github.io/alert-studio/merci.html">
+        <p class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
         <div class="field">
           <label for="f-nom">Nom</label>
           <input id="f-nom" name="nom" type="text" autocomplete="name" required aria-describedby="e-nom">
@@ -965,7 +979,9 @@ section{position:relative}
           <p class="err" id="e-lien" aria-live="polite"></p>
         </div>
         <button class="btn btn-primary" type="submit">Recevoir mon aperçu gratuit</button>
-        <p class="status" id="status" role="status" hidden><i class="ph ph-check-circle" aria-hidden="true"></i><span>C’est reçu. Votre aperçu arrive par e-mail&nbsp;; pensez à regarder vos indésirables.</span><small>(maquette&nbsp;: formulaire non connecté)</small></p>
+        <p class="help">Vos informations servent uniquement à préparer l’aperçu et à vous répondre. <a href="confidentialite.html">Confidentialité</a>.</p>
+        <p class="status" id="status" role="status" hidden><i class="ph ph-check-circle" aria-hidden="true"></i><span>C’est reçu. Votre aperçu arrive par e-mail&nbsp;; pensez à regarder vos indésirables.</span></p>
+        <p class="status status-err" id="status-err" role="alert" hidden><i class="ph ph-warning-circle" aria-hidden="true"></i><span>L’envoi n’a pas abouti. Réessayez, ou écrivez-moi à <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a>.</span></p>
       </form>
       <div class="book" id="reserver">
         <p class="book-q">Déjà décidé, ou vous préférez échanger directement&nbsp;?</p>
@@ -987,9 +1003,10 @@ section{position:relative}
       <span>Hugo Pilard</span>
       <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a>
       <a data-booking href="#apercu">Réserver un appel de 20&nbsp;minutes<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
-      <a href="#mentions">Mentions légales</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité et cookies</a>
     </div>
-    <p class="mentions mono" id="mentions">Mentions légales&nbsp;: en cours de publication.</p>
+    <p class="mentions mono">Ce site ne dépose aucun cookie. TVA non applicable, art.&nbsp;293&nbsp;B du CGI.</p>
   </div>
 </footer>
 
@@ -1394,9 +1411,11 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
     tio.observe(team.querySelector('.team-title'));
   }
 
-  /* ---------- Formulaire (maquette, aucun envoi) ---------- */
+  /* ---------- Formulaire : envoi par FormSubmit (e-mail vers Hugo), sans cookie ---------- */
   const form = document.getElementById('form');
   const status = document.getElementById('status');
+  const statusErr = document.getElementById('status-err');
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hugopilardece@gmail.com';
   const rules = [
     ['f-nom', 'e-nom', v => v.trim().length > 1, 'Indiquez votre nom.'],
     ['f-org', 'e-org', v => v.trim().length > 1, 'Indiquez le nom de votre organisme.'],
@@ -1416,11 +1435,26 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
   }));
   form.addEventListener('submit', e => {
     e.preventDefault();
-    status.hidden = true;
+    status.hidden = true; statusErr.hidden = true;
     let first = null;
     rules.forEach(r => { if (!check(r) && !first) first = document.getElementById(r[0]); });
     if (first) { first.focus(); return; }
-    status.hidden = false;
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn.getAttribute('aria-busy') === 'true') return;
+    btn.setAttribute('aria-busy', 'true');
+    const label = btn.textContent; btn.textContent = 'Envoi en cours…';
+    const data = Object.fromEntries(new FormData(form));
+    delete data._next;
+    data._subject = `Aperçu gratuit : ${data.organisme.trim()}`;
+    fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+      .then(r => r.json().then(j => ({ ok: r.ok, j })))
+      .then(({ ok, j }) => {
+        if (!ok || String(j.success) !== 'true') throw new Error(j.message || 'envoi refusé');
+        form.querySelectorAll('.field input, .field textarea').forEach(i => { i.value = ''; i.removeAttribute('aria-invalid'); });
+        status.hidden = false; status.focus?.();
+      })
+      .catch(() => { statusErr.hidden = false; })
+      .finally(() => { btn.removeAttribute('aria-busy'); btn.textContent = label; });
   });
 })();
 </script>
