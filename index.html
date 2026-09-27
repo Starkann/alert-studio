@@ -365,6 +365,7 @@ section{position:relative}
   scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
 @media (min-width:768px){.strip{padding-inline:max(32px,calc((100% - 1176px) / 2));scroll-padding-inline:max(32px,calc((100% - 1176px) / 2))}}
 .strip:focus-visible{outline-offset:-2px}
+@media (max-width:767px){.strip{align-items:flex-start}}
 .ex-card{flex:0 0 calc(100vw - 72px);display:flex;flex-direction:column;scroll-snap-align:start;background:var(--sheet);border:1px solid var(--line-2);border-radius:var(--r-md);padding:14px}
 .ex-card .player{--fr:var(--r-sm)}
 .ex-card .scene{aspect-ratio:4/5;max-height:72vh;max-height:72svh}
@@ -791,6 +792,7 @@ section{position:relative}
           <p class="tags"><span class="tag acc">Présenter</span><span class="tag">40&nbsp;s</span><span class="tag">690&nbsp;€</span></p>
         </div>
       </article>
+
       <article class="ex-card">
         <figure class="player" data-player data-mobile="p" data-dur="0:47" data-l="assets/ia-16x9.mp4" data-p="assets/ia-9x16.mp4">
           <div class="scene">
@@ -820,6 +822,53 @@ section{position:relative}
           <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
         </div>
       </article>
+
+      <article class="ex-card minor">
+        <figure class="player" data-player data-dur="0:27" data-l="assets/sst-16x9.mp4">
+          <div class="scene">
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/sst-16x9.mp4" poster="assets/posters/sst-16x9.jpg" aria-label="Fiche formation SST"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Fiche formation</span><p class="cx-t">SST</p></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : fiche formation SST"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
+            <span class="time mono" aria-hidden="true">0:00 / 0:27</span>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Fiche formation SST</h3>
+          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">27&nbsp;s</span><span class="tag">690&nbsp;€</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card minor">
+        <figure class="player" data-player data-dur="1:42" data-l="assets/rgpd-16x9.mp4">
+          <div class="scene">
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/rgpd-16x9.mp4" poster="assets/posters/rgpd-16x9.jpg" aria-label="Module e-learning RGPD"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">E-learning</span><p class="cx-t">RGPD au bureau</p></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : module e-learning RGPD"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
+            <span class="time mono" aria-hidden="true">0:00 / 1:42</span>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Module e-learning RGPD</h3>
+          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">1&nbsp;min&nbsp;42</span><span class="tag">Sur devis</span></p>
+        </div>
+      </article>
+
       <article class="ex-card">
         <figure class="player" data-player data-mobile="p" data-dur="0:15" data-l="assets/reel-16x9.mp4" data-p="assets/reel-9x16.mp4">
           <div class="scene">
@@ -847,28 +896,6 @@ section{position:relative}
         <div class="ex-meta">
           <h3>Motion design de présentation</h3>
           <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">15&nbsp;s</span><span class="tag">Sur devis</span></p>
-        </div>
-      </article>
-      <article class="ex-card minor">
-        <figure class="player" data-player data-dur="1:42" data-l="assets/rgpd-16x9.mp4">
-          <div class="scene">
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/rgpd-16x9.mp4" poster="assets/posters/rgpd-16x9.jpg" aria-label="Module e-learning RGPD"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">E-learning</span><p class="cx-t">RGPD au bureau</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : module e-learning RGPD"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 1:42</span>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Module e-learning RGPD</h3>
-          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">1&nbsp;min&nbsp;42</span><span class="tag">Sur devis</span></p>
         </div>
       </article>
     </div>
