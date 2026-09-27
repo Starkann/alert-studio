@@ -534,6 +534,14 @@ section{position:relative}
 @media (max-width:767px){.foot-in{display:grid;grid-template-columns:auto 1fr;gap:4px 14px}.foot-in>a{grid-column:1 / -1}}
 .foot a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink-2)}
 .mentions{margin-top:12px;color:var(--ink-3)}
+.social{display:flex;gap:8px}
+.foot .soc{justify-content:center;width:44px;height:44px;border:1px solid var(--line-2);border-radius:var(--r-sm);color:var(--ink);font-size:22px;text-decoration:none}
+.foot .soc:hover{border-color:var(--accent);color:var(--accent)}
+@media (max-width:767px){.social{grid-column:1 / -1;margin-top:6px}}
+.hugo-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.soc-l{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--line-2);border-radius:var(--r-sm);font-weight:600;font-size:.9375rem;text-decoration:none}
+.soc-l i{font-size:20px;color:var(--accent)}
+.soc-l:hover{border-color:var(--accent)}
 
 /* Apparitions */
 @media (prefers-reduced-motion:no-preference){
@@ -1039,6 +1047,7 @@ section{position:relative}
           <p class="roles mono">Scénariste, motion designer, chef de projet, service client.</p>
           <p>Un seul interlocuteur, du premier appel à la livraison. Vous n’expliquez jamais votre projet deux fois.</p>
           <p class="last">Je viens de l’audit&nbsp;: là-bas, un chiffre sans source ne passe pas. Vos scripts non plus.</p>
+          <p class="hugo-links"><a class="soc-l" href="https://www.linkedin.com/in/hugo-pilard/" target="_blank" rel="noopener"><i class="ph ph-linkedin-logo" aria-hidden="true"></i>LinkedIn<span class="sr-only"> (nouvel onglet)</span></a><a class="soc-l" href="https://www.youtube.com/@AlerteStudio" target="_blank" rel="noopener"><i class="ph ph-youtube-logo" aria-hidden="true"></i>YouTube<span class="sr-only"> (nouvel onglet)</span></a></p>
         </div>
       </article>
     </div>
@@ -1171,6 +1180,10 @@ section{position:relative}
       <a data-booking href="#apercu">Réserver un appel de 20&nbsp;minutes<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
       <a href="mentions-legales.html">Mentions légales</a>
       <a href="confidentialite.html">Confidentialité et cookies</a>
+      <div class="social">
+        <a class="soc" href="https://www.linkedin.com/in/hugo-pilard/" target="_blank" rel="noopener" aria-label="LinkedIn de Hugo Pilard (nouvel onglet)" title="LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+        <a class="soc" href="https://www.youtube.com/@AlerteStudio" target="_blank" rel="noopener" aria-label="Chaîne YouTube d’Alert Studio (nouvel onglet)" title="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+      </div>
     </div>
     <p class="mentions mono">Ce site ne dépose aucun cookie. TVA non applicable, art.&nbsp;293&nbsp;B du CGI.</p>
   </div>
