@@ -15,14 +15,14 @@
 <meta property="og:title" content="Capsules vidéo pour organismes Qualiopi, 690 € | Alert Studio">
 <meta property="og:description" content="Capsules animées pour organismes de formation Qualiopi : dès 690 €, livrées en 7 jours ouvrés. Aperçu gratuit, sans appel commercial.">
 <meta property="og:image" content="https://starkann.github.io/alert-studio/assets/posters/alert-16x9.jpg">
-<link rel="icon" type="image/png" href="assets/brand/logo-icone.png">
-<link rel="apple-touch-icon" href="assets/brand/logo-icone.png">
-<link rel="preload" as="image" href="assets/posters/hero-cover.jpg" fetchpriority="high">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-180.png">
+<link rel="preload" as="image" href="assets/posters/hero-cover-3d.jpg" fetchpriority="high">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/BricolageGrotesque-300-800-latin.woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/fonts/phosphor-regular.css">
-<link rel="stylesheet" href="assets/fonts/phosphor-fill.css">
+<link rel="stylesheet" href="assets/fonts/phosphor-regular-sub.css">
+<link rel="stylesheet" href="assets/fonts/phosphor-fill-sub.css">
 <style>
 /* p6 : refonte sombre d'apres les maquettes de Hugo (hierarchie ChatGPT Images), texte d'origine conserve.
    Fond quasi noir, un seul orange #FC4C14 (logo). Halo orange reserve a 4 elements : video d'en-tete,
@@ -135,6 +135,7 @@ section{position:relative}
 @media (min-width:768px){.lede{font-size:1.3rem}}
 .hero .offer-cap{display:block;width:fit-content;max-width:100%;margin:14px auto 0;padding:9px 16px;border-radius:var(--r-sm);background:color-mix(in srgb,var(--accent) 16%,transparent);border:1.5px solid color-mix(in srgb,var(--accent) 55%,transparent);font-size:.9375rem;line-height:1.4;color:var(--ink);text-align:center}
 .hero .offer-cap strong{font-weight:700}
+.hero .offer-cap{text-wrap:balance}
 .hero .ctrls{margin-top:12px}
 @media (min-width:768px){.hero .offer-cap{font-size:1rem}.hero-act .btn{width:auto}}
 @media (max-width:479px) and (max-height:700px){.hero .lede{display:none}.hero .player{margin-top:14px}.hero .offer-cap{margin-top:10px;padding:7px 12px;font-size:.875rem}.hero-act{margin-top:12px}}
@@ -176,13 +177,13 @@ section{position:relative}
 .ex-card .bigplay{display:none}
 @media (max-width:767px){.bigplay{display:none}}
 /* Miniature : image + texte net, visible jusqu'a la premiere lecture */
-.cover{position:absolute;inset:0;z-index:3;margin:0;background:#F7EDE1;transition:opacity .35s ease,visibility .35s}
+.cover{position:absolute;inset:0;z-index:3;margin:0;background:#161614;transition:opacity .35s ease,visibility .35s}
 .cover img{width:100%;height:100%;object-fit:cover}
-.cover-t{position:absolute;left:3.2%;top:42%;margin:0;color:#141410;font-weight:800;font-stretch:100%;font-size:5.15cqw;line-height:1.02;letter-spacing:-.025em}
-.cover-t em{font-style:normal;color:#E8430F}
+.cover-t{position:absolute;left:4.5%;top:33%;margin:0;color:#F4F4F1;text-shadow:0 2px 20px rgba(0,0,0,.6);font-weight:800;font-stretch:100%;font-size:5.15cqw;line-height:1.02;letter-spacing:-.025em}
+.cover-t em{font-style:normal;color:var(--accent)}
 .cover-t small{font-size:.62em;font-weight:760}
 .player.is-started .cover{opacity:0;visibility:hidden}
-.player .cover ~ .bigplay{display:grid;left:47.7%;top:57.7%;bottom:auto;width:17.4cqw;height:17.4cqw;transform:translate(-50%,-50%);border-radius:50%;background:rgba(28,28,24,.86);color:#fff;font-size:7cqw;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+.player .cover ~ .bigplay{display:grid;left:64%;top:53.3%;bottom:auto;width:12cqw;height:12cqw;transform:translate(-50%,-50%);border-radius:50%;background:var(--accent);color:var(--on-accent);font-size:5cqw;box-shadow:0 0 0 6px rgba(252,76,20,.25),0 12px 30px -10px rgba(0,0,0,.7)}
 .player .cover ~ .bigplay:hover{transform:translate(-50%,-50%) scale(1.04)}
 .player.is-started .cover ~ .bigplay{left:16px;top:auto;bottom:16px;width:56px;height:56px;transform:none;border-radius:var(--r-sm);background:var(--accent);color:var(--on-accent);font-size:24px}
 @media (max-width:767px){.player.is-started .cover ~ .bigplay{display:none}}
@@ -485,17 +486,6 @@ section{position:relative}
 .final h2{font-size:clamp(2.2rem,1.4rem + 2.8vw,3.7rem);max-width:17ch}
 .final-copy p{margin-top:20px;font-size:1.15rem;max-width:44ch;color:var(--ink-2)}
 .final-copy p.direct{color:var(--ink)}
-.final-vid{display:none}
-@media (min-width:1024px){
-  .final-vid{display:block;position:relative;margin-top:44px;width:min(100%,500px);transform:rotate(-2.2deg)}
-  .final-vid::before,.final-vid::after{content:"";position:absolute;z-index:0;border-radius:var(--r-md);border:1px solid var(--line-2);background:var(--sheet-2)}
-  .final-vid::before{inset:8% -9% 14% 72%;transform:rotate(6deg)}
-  .final-vid::after{inset:22% 70% 6% -8%;transform:rotate(-5deg)}
-  .final-vid .player{position:relative;z-index:1}
-  .final-vid .scene{aspect-ratio:16/9}
-  .final-vid .frame{border:10px solid #1C1C19;box-shadow:0 0 0 1.5px #34342E,0 30px 80px -30px rgba(252,76,20,.5)}
-  .final-vid .ctrls{margin-top:8px}
-}
 .form{position:relative;padding:24px 20px;background:var(--sheet);border:1.5px solid var(--accent);border-radius:var(--r-md);display:grid;gap:18px;box-shadow:var(--glow)}
 .field{display:grid;gap:8px}
 .field label{font-weight:620;font-size:.9375rem}
@@ -555,6 +545,78 @@ section{position:relative}
 .lt-in{justify-self:start;margin:0 0 2px}
 .launch-note{margin-top:16px;font-weight:600;color:var(--ink)}
 .launch-note+.tva{margin-top:4px}
+
+/* Video vedette (preuve de l'offre Expliquer) */
+.exemples{padding-top:clamp(56px,7vw,104px)}
+.vedette{display:grid;gap:24px;align-items:center;padding-bottom:clamp(56px,7vw,88px)}
+.v-copy{display:grid;gap:16px;justify-items:start}
+.v-kicker{color:var(--ink-3)}
+.v-copy h2{max-width:16ch}
+.v-lead{color:var(--ink-2);font-size:1.1rem;max-width:44ch}
+.v-facts{margin:0;display:grid;gap:0;width:100%;max-width:420px;border-top:1px solid var(--line)}
+.v-facts div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.v-facts dt{color:var(--ink-3)}
+.v-facts dd{margin:0;font-weight:640}
+.v-player .scene{aspect-ratio:16/9}
+.v-player .frame{border:clamp(6px,1vw,10px) solid #1C1C19;box-shadow:0 0 0 1.5px #34342E;border-radius:calc(var(--fr) + 4px)}
+.v-player .bigplay{display:grid;left:50%;top:50%;bottom:auto;width:72px;height:72px;transform:translate(-50%,-50%);border-radius:50%;font-size:30px}
+.v-player .bigplay:hover{transform:translate(-50%,-50%) scale(1.05)}
+.v-player.is-playing .bigplay{transform:translate(-50%,-50%) scale(.9)}
+@media (max-width:767px){
+  .v-player .scene{aspect-ratio:9/16;width:min(100%,calc(64svh * 9 / 16));margin-inline:auto}
+  .v-player.is-started .bigplay{display:none}
+  .v-copy .btn{width:100%}
+}
+@media (min-width:1024px){.vedette{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:56px}}
+.lib-title{font-size:clamp(1.8rem,1.2rem + 2vw,2.8rem)}
+/* Offres : lien vers l'exemple */
+.go{display:grid;gap:12px}
+.ex-link{justify-self:start;min-height:36px;font-size:.9375rem;color:var(--ink-2)}
+/* Bas de page : exemple d'apercu, reassurance, offre choisie */
+.sample{margin:0 0 20px;display:grid;grid-template-columns:132px 1fr;gap:16px;align-items:center;padding:14px;border:1px solid var(--line-2);border-radius:var(--r-md);background:var(--sheet)}
+.sample img{width:100%;height:auto;border-radius:var(--r-sm)}
+.sample figcaption{display:grid;gap:6px}
+.sample-k{color:var(--ink-3);font-size:.75rem}
+.sample-t{font-size:.9375rem;line-height:1.4;font-style:italic;color:var(--ink)}
+.sample-n{font-size:.8125rem;color:var(--ink-2)}
+@media (max-width:479px){.sample{grid-template-columns:104px 1fr;gap:12px;padding:12px}.sample-t{font-size:.875rem}}
+.reassure{text-align:center;font-weight:600;font-size:.9375rem;color:var(--ink)}
+.offer-line{padding:10px 14px;border-radius:var(--r-sm);border:1px solid rgba(255,210,63,.55);color:#FFD23F;font-weight:600;font-size:.9375rem}
+.offer-line[hidden]{display:none}
+.final-copy .book{margin-top:28px}
+.final-copy .book p{margin-top:0;max-width:none}
+.final-copy .book .book-q{color:var(--ink);font-size:1.3rem}
+.final-copy .book .book-note{font-size:.9375rem}
+#form{scroll-margin-top:calc(var(--nav-h) + 16px)}
+/* Miniatures des cartes : image nette, degrade en bas seulement */
+.cover-ex{background:linear-gradient(180deg,transparent 50%,rgba(10,10,8,.8));-webkit-backdrop-filter:none;backdrop-filter:none}
+@media (max-width:767px){
+  .ex-card .scene{aspect-ratio:9/16;max-height:60svh}
+  .ex-card{flex-basis:calc(60svh * 9 / 16 + 30px);max-width:calc(100vw - 72px)}
+  .ex-card.minor{flex-basis:calc(100vw - 72px)}
+}
+
+/* Tour 6 : ordre mobile, miniatures sans texte superpose, rythme */
+@media (max-width:767px){
+  .vedette{display:flex;flex-direction:column;gap:16px;align-items:stretch}
+  .v-copy{display:contents}
+  .v-kicker{order:1}.v-copy h2{order:2}.v-player{order:3;width:100%}.v-lead{order:4}.v-facts{order:5}.v-copy .btn{order:6}
+}
+@media (max-width:1023px){
+  .final-in{display:flex;flex-direction:column;gap:24px}
+  .final-copy{display:contents}
+  .final-copy h2{order:1}.final-copy>p:not(.direct){order:2;margin-top:0}.final-side{order:3}.final-copy .book{order:4;margin-top:8px}.final-copy .direct{order:5;margin-top:0}
+}
+@media (max-width:479px){.sample{grid-template-columns:1fr}}
+.cover-ex{background:none}
+.ex-card .cover ~ .bigplay{left:auto;top:auto;right:4cqw;bottom:4cqw;transform:none;width:52px;height:52px;font-size:22px}
+.ex-card .cover ~ .bigplay:hover{transform:scale(1.05)}
+.ex-card .cover ~ .bigplay{display:none!important}
+.exemples{padding-bottom:clamp(32px,4vw,56px)}
+@media (max-width:767px){.ex-card .scene{max-height:52svh}.ex-card{flex-basis:calc(52svh * 9 / 16 + 30px)}}
+.reassure{text-wrap:balance}
+.offer-line{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px}
+.offer-x{min-height:36px;padding:0 12px;border:1px solid rgba(255,210,63,.55);border-radius:var(--r-sm);background:transparent;color:#FFD23F;font:600 .875rem/1 var(--ff);cursor:pointer}
 /* Bandeau offre de lancement */
 /* Jaune signal : teinte hors palette (orange = actions, sombre = contenu) pour isoler l'annonce */
 .launch{--launch:#FFD23F;background:var(--launch);color:#141410;border-bottom:1px solid #E6B800}
@@ -571,7 +633,7 @@ section{position:relative}
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="Alert Studio, par Hugo Pilard : haut de page">
-      <img src="assets/brand/logo-wordmark-clair.png" alt="Alert Studio" width="1720" height="314" decoding="async">
+      <img src="assets/brand/logo-wordmark-clair-2x.png" alt="Alert Studio" width="351" height="64" decoding="async">
       <span class="brand-by">par Hugo Pilard</span>
     </a>
     <nav aria-label="Navigation principale">
@@ -582,14 +644,14 @@ section{position:relative}
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary btn-sm" href="#apercu">Aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+    <a class="btn btn-primary btn-sm" href="#form">Aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><i class="ph ph-list" aria-hidden="true"></i></button>
     <div class="menu" id="menu" hidden>
       <a href="#exemples">Exemples <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       <a href="#offres">Offres <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       <a href="#methode">Méthode <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       <a href="#faq">FAQ <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
-      <a href="#apercu">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      <a href="#form">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       <a href="#reserver">Réserver un appel de 20&nbsp;minutes <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
     </div>
   </div>
@@ -613,14 +675,13 @@ section{position:relative}
           <span class="ghost ghost-l" aria-hidden="true"></span>
           <span class="ghost ghost-p" aria-hidden="true"></span>
           <div class="frame">
-            <video class="v-l is-on" playsinline preload="metadata" src="assets/alert-16x9.mp4" poster="assets/posters/alert-16x9.jpg" aria-label="Présentation d’Alert Studio (paysage)"></video>
-            <video class="v-p" playsinline preload="none" poster="assets/posters/alert-9x16.jpg" aria-label="Présentation d’Alert Studio (vertical)" aria-hidden="true" tabindex="-1"></video>
-            <div class="cover" aria-hidden="true"><img src="assets/posters/hero-cover.jpg" alt="" width="1412" height="794" decoding="async" fetchpriority="high"><p class="cover-t">De vos idées<br>à une vidéo<br><em>en 7&nbsp;jours <small>ouvrés</small></em></p></div>
+            <video class="v-l is-on" playsinline preload="none" src="assets/alert-16x9.mp4" aria-label="Présentation d’Alert Studio (paysage)"></video>
+            <video class="v-p" playsinline preload="none" aria-label="Présentation d’Alert Studio (vertical)" aria-hidden="true" tabindex="-1"></video>
+            <div class="cover" aria-hidden="true"><img src="assets/posters/hero-cover-3d.jpg" alt="" width="1600" height="900" decoding="async" fetchpriority="high"><p class="cover-t">De vos idées<br>à une vidéo<br><em>en 7&nbsp;jours <small>ouvrés</small></em></p></div>
             <span class="prog" aria-hidden="true"></span>
             <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
           </div>
         </div>
-        <p class="offer-cap"><strong>Ce que vous recevez pour 690&nbsp;€</strong>&nbsp;: une vidéo comme <span style="white-space:nowrap">celle-ci</span>, d’environ une minute.</p>
         <div class="ctrls">
           <button class="cbtn" type="button" data-act="play" aria-label="Lire"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
           <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
@@ -631,10 +692,11 @@ section{position:relative}
           </div>
           <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
         </div>
+        <p class="offer-cap"><strong>Ce que vous recevez pour 690&nbsp;€</strong>&nbsp;: une vidéo comme <span style="white-space:nowrap">celle-ci</span>, d’environ une minute.</p>
       </figure>
 
       <div class="hero-act">
-        <a class="btn btn-primary" id="hero-cta" href="#apercu">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-primary" id="hero-cta" href="#form">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
         <a class="link-arrow" href="#exemples">Voir les exemples <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
       </div>
     </div>
@@ -681,6 +743,245 @@ section{position:relative}
     </div>
   </section>
 
+  <!-- Exemples : librairie -->
+  <section class="exemples sec" id="exemples" aria-labelledby="h-exemples">
+    <div class="wrap vedette" id="vedette">
+      <figure class="player v-player" data-player data-lazy data-mobile="p" data-dur="0:32" data-l="assets/cyber-16x9.mp4" data-p="assets/cyber-9x16.mp4">
+        <div class="scene">
+          <span class="ghost ghost-l" aria-hidden="true"></span>
+          <span class="ghost ghost-p" aria-hidden="true"></span>
+          <div class="frame">
+            <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité : hameçonnage (paysage)"></video>
+            <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité : hameçonnage (vertical)" aria-hidden="true" tabindex="-1"></video>
+            <span class="prog" aria-hidden="true"></span>
+            <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+          </div>
+        </div>
+        <div class="ctrls">
+          <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule hameçonnage"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+          <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
+          <span class="time mono" aria-hidden="true">0:00 / 0:32</span>
+          <div class="seg" role="group" aria-label="Format de la vidéo : capsule hameçonnage">
+            <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+            <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+          </div>
+          <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+        </div>
+      </figure>
+      <div class="v-copy">
+        <p class="v-kicker mono">Capsule pédagogique, cybersécurité</p>
+        <h2 id="h-exemples" class="rv">32 secondes pour ne plus mordre à l’hameçon.</h2>
+        <p class="v-lead">Voilà ce que vous recevez pour 1&#8239;290&nbsp;€, tarif de lancement&nbsp;: une capsule Expliquer, pour vos stagiaires, en paysage et en vertical.</p>
+        <dl class="v-facts">
+          <div><dt>Formats</dt><dd>Paysage + vertical</dd></div>
+          <div><dt>Durée</dt><dd>32&nbsp;s</dd></div>
+          <div><dt>Rendu</dt><dd>3D animée (selon le sujet)</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="#form" data-offre="Expliquer, 1 290 €">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="wrap ex-head">
+      <h2 id="h-lib" class="rv lib-title">Chaque vidéo a son usage.<span class="spark" aria-hidden="true"></span></h2>
+      <div class="ex-nav">
+        <button class="cbtn ex-prev" type="button" aria-label="Exemple précédent" disabled><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
+        <button class="cbtn ex-next" type="button" aria-label="Exemple suivant"><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <div class="strip" role="region" aria-label="Exemples de vidéos" tabindex="0">
+      <article class="ex-card">
+        <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:27" data-l="assets/sst-16x9.mp4" data-p="assets/sst-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Fiche formation SST (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Fiche formation SST (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : fiche formation SST"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : fiche formation SST">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Fiche formation SST</h3>
+          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">27&nbsp;s</span><span class="tag">690&nbsp;€</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <figure class="player" data-player data-lazy data-mobile="p" data-dur="1:07" data-l="assets/mgmt-16x9.mp4" data-p="assets/mgmt-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique management (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique management (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique management"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique management">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Capsule pédagogique management</h3>
+          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">1&nbsp;min&nbsp;07</span><span class="tag">1&#8239;290&nbsp;€</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:40" data-l="assets/caces-16x9.mp4" data-p="assets/caces-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Fiche formation CACES R489 (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Fiche formation CACES R489 (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : fiche formation CACES R489"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo Parcours CACES R489">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Fiche formation CACES R489</h3>
+          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">40&nbsp;s</span><span class="tag">690&nbsp;€</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:47" data-l="assets/ia-16x9.mp4" data-p="assets/ia-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique IA (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique IA (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique IA"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo Vérifier avant de croire">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Capsule pédagogique IA</h3>
+          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card minor">
+        <figure class="player" data-player data-lazy data-dur="1:42" data-l="assets/rgpd-16x9.mp4">
+          <div class="scene">
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Module e-learning RGPD"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : module e-learning RGPD"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Module e-learning RGPD</h3>
+          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">1&nbsp;min&nbsp;42</span><span class="tag">Sur devis</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:44" data-l="assets/crm-16x9.mp4" data-p="assets/crm-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Présentation d’entreprise, cabinet d’audit (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Présentation d’entreprise, cabinet d’audit (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : présentation d’entreprise, cabinet d’audit"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : présentation d’entreprise, cabinet d’audit">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Présentation d’entreprise, cabinet d’audit</h3>
+          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">44&nbsp;s</span><span class="tag">Sur devis</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:15" data-l="assets/reel-16x9.mp4" data-p="assets/reel-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Motion design de présentation (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Motion design de présentation (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : motion design de présentation"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : motion design de présentation">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Motion design de présentation</h3>
+          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">15&nbsp;s</span><span class="tag">Sur devis</span></p>
+        </div>
+      </article>
+    </div>
+    <div class="strip-prog" aria-hidden="true"><span></span></div>
+  </section>
+
   <!-- Pour qui -->
   <section class="qui sec" aria-labelledby="h-qui">
     <div class="wrap">
@@ -693,7 +994,7 @@ section{position:relative}
           <li><span class="ck" aria-hidden="true"><i class="ph ph-check"></i></span><span>vous répondez à un e-mail dans la journée (c’est ce qui tient le délai).</span></li>
         </ul>
       </div>
-      <p class="notfor rv"><span class="ck x" aria-hidden="true"><i class="ph ph-x"></i></span><span><strong>Pas pour vous si</strong> <span class="strike">vous cherchez un tournage, des personnages 3D ou six réunions avant le premier dessin.</span></span></p>
+      <p class="notfor rv"><span class="ck x" aria-hidden="true"><i class="ph ph-x"></i></span><span><strong>Pas pour vous si</strong> <span class="strike">vous cherchez un tournage, des personnages 3D réalistes ou six réunions avant le premier dessin.</span></span></p>
     </div>
   </section>
 
@@ -714,7 +1015,8 @@ section{position:relative}
             <p>La première en 7&nbsp;jours ouvrés, puis une par semaine. 5&nbsp;vidéos au prix d’une seule chez le studio le plus cher de mon relevé.</p>
           </div>
           <div class="go">
-            <a class="btn btn-primary" href="#apercu">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-arrow ex-link" href="#top">Voir l’exemple à 690&nbsp;€ <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            <a class="btn btn-primary" href="#form" data-offre="Présenter, 690 €">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="offer offer-b rv" aria-labelledby="o-expliquer">
@@ -724,7 +1026,8 @@ section{position:relative}
           <p class="desc">Pour vos stagiaires&nbsp;: qu’ils comprennent, et qu’ils retiennent.</p>
           <p class="desc muted">Plus d’écriture, pas seulement plus de durée&nbsp;: script vérifié, source réglementaire citée à l’écran si besoin. À envoyer avant la session, à revoir après.</p>
           <div class="go">
-            <a class="btn btn-primary" href="#apercu">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-arrow ex-link" href="#vedette">Voir l’exemple à 1&#8239;290&nbsp;€ <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            <a class="btn btn-primary" href="#form" data-offre="Expliquer, 1 290 €">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -761,7 +1064,7 @@ section{position:relative}
     <div class="wrap risque-in">
       <div>
         <h2 id="h-risque" class="rv">Jugez sur pièce avant de vous engager.</h2>
-        <p class="risque-txt rv">Alert Studio vient d’ouvrir&nbsp;: pas encore de témoignages à vous montrer. À la place, une vraie capsule à regarder, et un aperçu gratuit de la vôtre.</p>
+        <p class="risque-txt rv">Alert Studio vient d’ouvrir&nbsp;: pas encore de témoignages à vous montrer. À la place, de <a href="#exemples">vraies vidéos à regarder</a>, et un aperçu gratuit de la vôtre.</p>
         <div class="guarantee rv">
           <span class="ck" aria-hidden="true"><i class="ph ph-check"></i></span>
           <p>Ensuite, vous lisez le script avant qu’une seule image soit animée. <strong>Il ne vous plaît pas&nbsp;? Vous arrêtez là, acompte remboursé.</strong></p>
@@ -782,253 +1085,6 @@ section{position:relative}
         </div>
       </figure>
     </div>
-  </section>
-
-  <!-- Exemples : librairie -->
-  <section class="exemples sec" id="exemples" aria-labelledby="h-exemples">
-    <div class="wrap ex-head">
-      <h2 id="h-exemples" class="rv">Chaque vidéo a son usage.<span class="spark" aria-hidden="true"></span></h2>
-      <div class="ex-nav">
-        <button class="cbtn ex-prev" type="button" aria-label="Exemple précédent" disabled><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
-        <button class="cbtn ex-next" type="button" aria-label="Exemple suivant"><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
-      </div>
-    </div>
-
-    <div class="strip" role="region" aria-label="Exemples de vidéos" tabindex="0">
-      <article class="ex-card">
-        <figure class="player" data-player data-mobile="p" data-dur="0:32" data-l="assets/cyber-16x9.mp4" data-p="assets/cyber-9x16.mp4">
-          <div class="scene">
-            <span class="ghost ghost-l" aria-hidden="true"></span>
-            <span class="ghost ghost-p" aria-hidden="true"></span>
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/cyber-16x9.mp4" poster="assets/posters/cyber-16x9.jpg" aria-label="Capsule pédagogique cybersécurité (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/cyber-9x16.jpg" aria-label="Capsule pédagogique cybersécurité (vertical)" aria-hidden="true" tabindex="-1"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Capsule pédagogique</span><p class="cx-t">Hameçonnage</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique cybersécurité"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 0:32</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique cybersécurité">
-              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
-              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
-            </div>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Capsule pédagogique cybersécurité</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">32&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
-        </div>
-      </article>
-
-      <article class="ex-card">
-        <figure class="player" data-player data-mobile="p" data-dur="0:27" data-l="assets/sst-16x9.mp4" data-p="assets/sst-9x16.mp4">
-          <div class="scene">
-            <span class="ghost ghost-l" aria-hidden="true"></span>
-            <span class="ghost ghost-p" aria-hidden="true"></span>
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/sst-16x9.mp4" poster="assets/posters/sst-16x9.jpg" aria-label="Fiche formation SST (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/sst-9x16.jpg" aria-label="Fiche formation SST (vertical)" aria-hidden="true" tabindex="-1"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Fiche formation</span><p class="cx-t">SST</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : fiche formation SST"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 0:27</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo : fiche formation SST">
-              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
-              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
-            </div>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Fiche formation SST</h3>
-          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">27&nbsp;s</span><span class="tag">690&nbsp;€</span></p>
-        </div>
-      </article>
-
-      <article class="ex-card">
-        <figure class="player" data-player data-mobile="p" data-dur="1:07" data-l="assets/mgmt-16x9.mp4" data-p="assets/mgmt-9x16.mp4">
-          <div class="scene">
-            <span class="ghost ghost-l" aria-hidden="true"></span>
-            <span class="ghost ghost-p" aria-hidden="true"></span>
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/mgmt-16x9.mp4" poster="assets/posters/mgmt-16x9.jpg" aria-label="Capsule pédagogique management (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/mgmt-9x16.jpg" aria-label="Capsule pédagogique management (vertical)" aria-hidden="true" tabindex="-1"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Capsule pédagogique</span><p class="cx-t">Recadrer sans braquer</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique management"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 1:07</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique management">
-              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
-              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
-            </div>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Capsule pédagogique management</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">1&nbsp;min&nbsp;07</span><span class="tag">1&#8239;290&nbsp;€</span></p>
-        </div>
-      </article>
-
-      <article class="ex-card">
-        <figure class="player" data-player data-mobile="p" data-dur="0:40" data-l="assets/caces-16x9.mp4" data-p="assets/caces-9x16.mp4">
-          <div class="scene">
-            <span class="ghost ghost-l" aria-hidden="true"></span>
-            <span class="ghost ghost-p" aria-hidden="true"></span>
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/caces-16x9.mp4" poster="assets/posters/caces-16x9.jpg" aria-label="Fiche formation CACES R489 (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/caces-9x16.jpg" aria-label="Fiche formation CACES R489 (vertical)" aria-hidden="true" tabindex="-1"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Fiche formation</span><p class="cx-t">CACES R489</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : fiche formation CACES R489"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 0:40</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo Parcours CACES R489">
-              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
-              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
-            </div>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Fiche formation CACES R489</h3>
-          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">40&nbsp;s</span><span class="tag">690&nbsp;€</span></p>
-        </div>
-      </article>
-
-      <article class="ex-card">
-        <figure class="player" data-player data-mobile="p" data-dur="0:47" data-l="assets/ia-16x9.mp4" data-p="assets/ia-9x16.mp4">
-          <div class="scene">
-            <span class="ghost ghost-l" aria-hidden="true"></span>
-            <span class="ghost ghost-p" aria-hidden="true"></span>
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/ia-16x9.mp4" poster="assets/posters/ia-16x9.jpg" aria-label="Capsule pédagogique IA (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/ia-9x16.jpg" aria-label="Capsule pédagogique IA (vertical)" aria-hidden="true" tabindex="-1"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Capsule pédagogique</span><p class="cx-t">L’IA au travail</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique IA"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 0:47</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo Vérifier avant de croire">
-              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
-              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
-            </div>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Capsule pédagogique IA</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
-        </div>
-      </article>
-
-      <article class="ex-card minor">
-        <figure class="player" data-player data-dur="1:42" data-l="assets/rgpd-16x9.mp4">
-          <div class="scene">
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/rgpd-16x9.mp4" poster="assets/posters/rgpd-16x9.jpg" aria-label="Module e-learning RGPD"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">E-learning</span><p class="cx-t">RGPD au bureau</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : module e-learning RGPD"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 1:42</span>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Module e-learning RGPD</h3>
-          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">1&nbsp;min&nbsp;42</span><span class="tag">Sur devis</span></p>
-        </div>
-      </article>
-
-      <article class="ex-card">
-        <figure class="player" data-player data-mobile="p" data-dur="0:44" data-l="assets/crm-16x9.mp4" data-p="assets/crm-9x16.mp4">
-          <div class="scene">
-            <span class="ghost ghost-l" aria-hidden="true"></span>
-            <span class="ghost ghost-p" aria-hidden="true"></span>
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/crm-16x9.mp4" poster="assets/posters/crm-16x9.jpg" aria-label="Présentation d’entreprise CR&amp;M audit (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/crm-9x16.jpg" aria-label="Présentation d’entreprise CR&amp;M audit (vertical)" aria-hidden="true" tabindex="-1"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Présentation d’entreprise</span><p class="cx-t">CR&amp;M audit</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : présentation d’entreprise CR&amp;M audit"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 0:44</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo : présentation d’entreprise CR&amp;M audit">
-              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
-              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
-            </div>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Présentation d’entreprise CR&amp;M audit</h3>
-          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">44&nbsp;s</span><span class="tag">Sur devis</span></p>
-        </div>
-      </article>
-
-      <article class="ex-card">
-        <figure class="player" data-player data-mobile="p" data-dur="0:15" data-l="assets/reel-16x9.mp4" data-p="assets/reel-9x16.mp4">
-          <div class="scene">
-            <span class="ghost ghost-l" aria-hidden="true"></span>
-            <span class="ghost ghost-p" aria-hidden="true"></span>
-            <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/reel-16x9.mp4" poster="assets/posters/reel-16x9.jpg" aria-label="Motion design de présentation (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/reel-9x16.jpg" aria-label="Motion design de présentation (vertical)" aria-hidden="true" tabindex="-1"></video>
-              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Motion design</span><p class="cx-t">Présentation du studio</p></div>
-              <span class="prog" aria-hidden="true"></span>
-              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-            </div>
-          </div>
-          <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : motion design de présentation"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-            <span class="time mono" aria-hidden="true">0:00 / 0:15</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo : motion design de présentation">
-              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
-              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
-            </div>
-            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-          </div>
-        </figure>
-        <div class="ex-meta">
-          <h3>Motion design de présentation</h3>
-          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">15&nbsp;s</span><span class="tag">Sur devis</span></p>
-        </div>
-      </article>
-    </div>
-    <div class="strip-prog" aria-hidden="true"><span></span></div>
   </section>
 
   <!-- Methode -->
@@ -1071,7 +1127,7 @@ section{position:relative}
     <div class="wrap">
       <h2 id="h-team" class="team-title">Notre équipe<span class="dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></h2>
       <article class="hugo" aria-labelledby="h-hugo">
-        <img src="assets/hugo.jpg" alt="Hugo Pilard, souriant, assis à une terrasse de café le soir." width="900" height="1200" decoding="async">
+        <picture><source srcset="assets/hugo-640.webp" type="image/webp"><img src="assets/hugo-640.jpg" alt="Hugo Pilard, souriant, assis à une terrasse de café le soir." width="640" height="853" loading="lazy" decoding="async"></picture>
         <div class="hugo-body">
           <h3 id="h-hugo" class="hugo-name"><span class="hl">Hugo.</span></h3>
           <p class="roles mono">Scénariste, motion designer, chef de projet, service client.</p>
@@ -1102,7 +1158,7 @@ section{position:relative}
         </details>
         <details>
           <summary>Pourquoi un tarif de lancement&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
-          <p>Alert Studio démarre. Les 5 premiers clients bénéficient de ces prix en échange de leur retour sur notre collaboration. Les tarifs seront revus ensuite.</p>
+          <p>Alert Studio démarre. Ces prix sont réservés aux 5 premiers clients&nbsp;; ensuite, ils devraient augmenter.</p>
         </details>
         <details>
           <summary>Le prix peut-il changer&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
@@ -1137,65 +1193,59 @@ section{position:relative}
     <div class="wrap final-in">
       <div class="final-copy">
         <h2 id="h-final" class="rv">Donnez-moi une formation. Je vous montre à quoi ressemblerait <span class="hl">sa vidéo</span>.</h2>
-        <p>Vous recevez par e-mail les premières phrases du script et une image de votre capsule, à vos couleurs. Gratuit, sans appel commercial.</p>
-        <p>L’aperçu vous plaît&nbsp;? Vous <a href="#reserver">réservez 20&nbsp;minutes</a>, quand vous voulez. Sinon, on en reste là.</p>
-        <p class="direct">Me contacter directement par mail&nbsp;: <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a></p>
-        <div class="final-vid">
-          <figure class="player" data-player data-dur="1:04" data-l="assets/alert-16x9.mp4">
-            <div class="scene">
-              <div class="frame">
-                <video class="v-l is-on" playsinline preload="none" src="assets/alert-16x9.mp4" poster="assets/posters/alert-16x9.jpg" aria-label="Présentation d’Alert Studio"></video>
-                <div class="cover" aria-hidden="true"><img src="assets/posters/hero-cover.jpg" alt="" width="1412" height="794" loading="lazy" decoding="async"><p class="cover-t">De vos idées<br>à une vidéo<br><em>en 7&nbsp;jours <small>ouvrés</small></em></p></div>
-                <span class="prog" aria-hidden="true"></span>
-                <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
-              </div>
-            </div>
-            <div class="ctrls">
-              <button class="cbtn" type="button" data-act="play" aria-label="Lire : présentation d’Alert Studio"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-              <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-              <span class="time mono" aria-hidden="true">0:00 / 1:04</span>
-              <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
-            </div>
-          </figure>
+        <p>Vous recevez par e-mail les premières phrases du script et une image de votre capsule, à vos couleurs.</p>
+        <p>L’aperçu vous plaît&nbsp;? On en parle 20&nbsp;minutes, quand vous voulez. Sinon, on en reste là.</p>
+        <div class="book" id="reserver">
+          <p class="book-q">Déjà décidé, ou vous préférez en parler de vive voix&nbsp;?</p>
+          <a class="btn btn-line" data-booking href="#apercu">Réserver un appel de 20&nbsp;minutes<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
+          <p class="book-note">20&nbsp;minutes en visio pour cadrer votre projet. Le prix ne bouge pas après l’appel.</p>
         </div>
+        <p class="direct">Me contacter directement par mail&nbsp;: <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a></p>
       </div>
       <div class="final-side">
+      <figure class="sample">
+        <img src="assets/posters/caces-16x9.jpg" alt="Image d’exemple : écran « Jour 1, la théorie » d’une capsule CACES R489." width="1280" height="720" loading="lazy" decoding="async">
+        <figcaption>
+          <p class="sample-k mono">Exemple d’aperçu · Parcours CACES R489</p>
+          <p class="sample-t">«&nbsp;Devenir cariste&nbsp;? Votre parcours commence ici. Jour&nbsp;1&nbsp;: la théorie. Circulation, stabilité des charges, lecture de la plaque de charge.&nbsp;»</p>
+          <p class="sample-n">Voici ce que vous recevez gratuitement&nbsp;: les premières phrases du script et une image, à vos couleurs.</p>
+        </figcaption>
+      </figure>
       <form class="form" id="form" novalidate action="https://formsubmit.co/hugopilardece@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Alert Studio : demande d’aperçu gratuit">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://starkann.github.io/alert-studio/merci.html">
         <p class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+        <p class="offer-line" id="offer-line" role="status" hidden><span id="offer-txt"></span> <button type="button" class="offer-x" id="offer-x">Changer</button></p>
+        <input type="hidden" name="offre" id="f-offre" value="">
+        <div class="field">
+          <label for="f-lien">Quelle formation&nbsp;? Un lien vers la fiche, ou deux lignes</label>
+          <textarea id="f-lien" name="formation" rows="3" required aria-describedby="e-lien" placeholder="https://… ou : CACES R489, 3 jours, caristes débutants"></textarea>
+          <p class="err" id="e-lien" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-org">Organisme (ou son site)</label>
+          <input id="f-org" name="organisme" type="text" autocomplete="organization" required aria-describedby="h-org e-org">
+          <p class="help" id="h-org">Votre site me donne vos couleurs.</p>
+          <p class="err" id="e-org" aria-live="polite"></p>
+        </div>
         <div class="field">
           <label for="f-nom">Nom</label>
           <input id="f-nom" name="nom" type="text" autocomplete="name" required aria-describedby="e-nom">
           <p class="err" id="e-nom" aria-live="polite"></p>
         </div>
         <div class="field">
-          <label for="f-org">Organisme</label>
-          <input id="f-org" name="organisme" type="text" autocomplete="organization" required aria-describedby="e-org">
-          <p class="err" id="e-org" aria-live="polite"></p>
-        </div>
-        <div class="field">
           <label for="f-mail">E-mail</label>
           <input id="f-mail" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-mail">
           <p class="err" id="e-mail" aria-live="polite"></p>
         </div>
-        <div class="field">
-          <label for="f-lien">Votre formation&nbsp;: un lien ou deux lignes</label>
-          <textarea id="f-lien" name="formation" rows="2" required aria-describedby="e-lien" placeholder="https://… ou : CACES R489, 3 jours, caristes débutants"></textarea>
-          <p class="err" id="e-lien" aria-live="polite"></p>
-        </div>
         <button class="btn btn-primary" type="submit">Recevoir mon aperçu gratuit</button>
-        <p class="help">Vos informations servent uniquement à préparer l’aperçu et à vous répondre. <a href="confidentialite.html">Confidentialité</a>.</p>
-        <p class="status" id="status" role="status" hidden><i class="ph ph-check-circle" aria-hidden="true"></i><span>C’est reçu. Votre aperçu arrive par e-mail&nbsp;; pensez à regarder vos indésirables.</span></p>
+        <p class="reassure">Gratuit · Par e-mail · Sans appel commercial.</p>
+        <p class="help">Vos informations servent uniquement à préparer l’aperçu et à vous répondre. <a href="confidentialite.html">Confidentialité</a>.<br>Tarifs de lancement réservés aux 5 premiers clients.</p>
+        <p class="status" id="status" role="status" hidden><i class="ph ph-check-circle" aria-hidden="true"></i><span>C’est reçu. Je prépare votre aperçu et vous l’envoie depuis hugopilardece@gmail.com&nbsp;: ajoutez cette adresse à vos contacts pour qu’il n’arrive pas dans vos indésirables.</span></p>
         <p class="status status-err" id="status-err" role="alert" hidden><i class="ph ph-warning-circle" aria-hidden="true"></i><span>L’envoi n’a pas abouti. Réessayez, ou écrivez-moi à <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a>.</span></p>
       </form>
-      <div class="book" id="reserver">
-        <p class="book-q">Déjà décidé, ou vous préférez échanger directement&nbsp;?</p>
-        <a class="btn btn-line" data-booking href="#apercu">Réserver un appel de 20&nbsp;minutes<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
-        <p class="book-note">20&nbsp;minutes en visio pour cadrer votre projet. Le prix ne bouge pas après l’appel.</p>
-      </div>
       </div>
     </div>
   </section>
@@ -1204,7 +1254,7 @@ section{position:relative}
 <footer class="foot">
   <div class="wrap">
     <div class="foot-in">
-      <img src="assets/brand/logo-wordmark-clair.png" alt="Alert Studio" width="1720" height="314" loading="lazy" decoding="async">
+      <img src="assets/brand/logo-wordmark-clair-2x.png" alt="Alert Studio" width="351" height="64" loading="lazy" decoding="async">
       <span>Hugo Pilard</span>
       <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a>
       <a data-booking href="#apercu">Réserver un appel de 20&nbsp;minutes<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
@@ -1220,7 +1270,7 @@ section{position:relative}
 </footer>
 
 <div class="dock" id="dock" aria-hidden="true">
-  <a class="btn btn-primary" href="#apercu" tabindex="-1">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+  <a class="btn btn-primary" href="#form" tabindex="-1">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
 </div>
 
 <script>
@@ -1275,10 +1325,11 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
       this.started = false;
       el.dataset.orient = 'l';
       el.dataset.shown = 'l';
+      this.lazy = 'lazy' in el.dataset; /* source donnee a l'approche de l'ecran (aucun telechargement inutile) */
 
       /* Sur telephone, les exemples demarrent en vertical */
       if (el.dataset.mobile === 'p' && this.src.p && MOBILE.matches) {
-        const vp = this.ensure('p', 'metadata'), vl = this.vids.l;
+        const vp = this.lazy ? this.vids.p : this.ensure('p', 'metadata'), vl = this.vids.l;
         vl.preload = 'none';
         vp.classList.add('is-on'); vl.classList.remove('is-on');
         vp.removeAttribute('aria-hidden'); vp.removeAttribute('tabindex');
@@ -1299,7 +1350,7 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
       this.bPlay.addEventListener('click', toggle);
       this.frameEl.addEventListener('click', toggle);
       if (this.bFs) this.bFs.addEventListener('click', () => this.fullscreen());
-      this.bMute.addEventListener('click', () => {
+      if (this.bMute) this.bMute.addEventListener('click', () => {
         this.muted = !this.muted;
         this.shown.muted = this.muted;
         if (!this.muted && this.shown.volume === 0) this.shown.volume = 1;
@@ -1337,6 +1388,7 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
       players.forEach(p => { if (p !== this) p.pauseAll(); });
       this.started = true;
       this.el.classList.add('is-started');
+      if (!this.shown.getAttribute('src')) this.ensure(this.o, 'auto');
       const v = this.shown;
       v.muted = this.muted;
       const pr = v.play();
@@ -1355,8 +1407,8 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
       this.bPlay.setAttribute('aria-label', (playing ? 'Mettre en pause' : 'Lire') + this.suffix);
       this.bPlay.innerHTML = `<i class="ph-fill ${playing ? 'ph-pause' : 'ph-play'}" aria-hidden="true"></i>`;
       this.big.innerHTML = `<i class="${v.ended ? 'ph ph-arrow-counter-clockwise' : 'ph-fill ph-play'}"></i>`;
-      this.bMute.setAttribute('aria-label', this.muted ? 'Activer le son' : 'Couper le son');
-      this.bMute.innerHTML = `<i class="ph ${this.muted ? 'ph-speaker-slash' : 'ph-speaker-high'}" aria-hidden="true"></i>`;
+      if (this.bMute) this.bMute.setAttribute('aria-label', this.muted ? 'Activer le son' : 'Couper le son');
+      if (this.bMute) this.bMute.innerHTML = `<i class="ph ${this.muted ? 'ph-speaker-slash' : 'ph-speaker-high'}" aria-hidden="true"></i>`;
       const d = v.duration, ok = isFinite(d) && d > 0;
       if (this.time) this.time.textContent = fmt(v.currentTime) + ' / ' + (ok ? fmt(d) : this.el.dataset.dur);
       if (this.prog) this.prog.style.setProperty('--p', ok ? Math.min(1, v.currentTime / d).toFixed(4) : 0);
@@ -1506,6 +1558,17 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
     }
   }
   document.querySelectorAll('[data-player]').forEach(el => players.push(new Player(el)));
+  /* Chargement paresseux : image d'apercu et metadonnees seulement quand le lecteur approche de l'ecran */
+  const lazyPlayers = players.filter(p => p.lazy);
+  if (HAS_IO) {
+    const lio = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const pl = players.find(p => p.el === e.target);
+      if (pl) pl.ensure(pl.o, 'metadata');
+      lio.unobserve(e.target);
+    }), { rootMargin: '600px 600px' });
+    lazyPlayers.forEach(p => lio.observe(p.el));
+  } else lazyPlayers.forEach(p => p.ensure(p.o, 'metadata'));
   /* Commandes natives pendant le plein ecran uniquement */
   const fsChange = () => {
     const fe = document.fullscreenElement || document.webkitFullscreenElement;
@@ -1540,13 +1603,16 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
   const finalSec = document.getElementById('apercu');
   if (dock && HAS_IO) {
     let pastHero = false, atForm = false;
+    const twins = new Set();
     const sync = () => {
-      const on = pastHero && !atForm;
+      const on = pastHero && !atForm && !twins.size;
       dock.classList.toggle('is-on', on);
       dock.setAttribute('aria-hidden', String(!on));
       dock.querySelector('a').tabIndex = on ? 0 : -1;
     };
     new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.top < 0; sync(); }).observe(heroCta);
+    const tio2 = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? twins.add(e.target) : twins.delete(e.target)); sync(); });
+    document.querySelectorAll('.v-copy .btn, .go .btn').forEach(b => tio2.observe(b));
     new IntersectionObserver(([e]) => { atForm = e.isIntersecting; sync(); }, { threshold: .15 }).observe(finalSec);
   }
 
@@ -1643,12 +1709,20 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
   const statusErr = document.getElementById('status-err');
   const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hugopilardece@gmail.com';
   const rules = [
-    ['f-nom', 'e-nom', v => v.trim().length > 1, 'Indiquez votre nom.'],
-    ['f-org', 'e-org', v => v.trim().length > 1, 'Indiquez le nom de votre organisme.'],
-    ['f-mail', 'e-mail', v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()), 'Cette adresse e-mail semble incomplète.'],
     /* Lien OU description courte : l'un des deux suffit */
-    ['f-lien', 'e-lien', v => { v = v.trim(); return /^(https?:\/\/)?[\w-]+(\.[\w-]+)+(\/\S*)?$/i.test(v) || (v.length >= 12 && /\s/.test(v)); }, 'Collez le lien de la formation, ou décrivez-la en deux lignes.']
+    ['f-lien', 'e-lien', v => { v = v.trim(); return /^(https?:\/\/)?[\w-]+(\.[\w-]+)+(\/\S*)?$/i.test(v) || (v.length >= 12 && /\s/.test(v)); }, 'Collez le lien de la formation, ou décrivez-la en deux lignes.'],
+    ['f-org', 'e-org', v => v.trim().length > 1, 'Indiquez le nom de votre organisme.'],
+    ['f-nom', 'e-nom', v => v.trim().length > 1, 'Indiquez votre nom.'],
+    ['f-mail', 'e-mail', v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()), 'Cette adresse e-mail semble incomplète.']
   ];
+  /* Offre choisie depuis une carte de prix : transmise avec la demande */
+  const offreIn = document.getElementById('f-offre'), offreLine = document.getElementById('offer-line');
+  document.querySelectorAll('[data-offre]').forEach(a => a.addEventListener('click', () => {
+    offreIn.value = a.dataset.offre;
+    document.getElementById('offer-txt').textContent = `Offre choisie : ${a.dataset.offre}, tarif de lancement.`;
+    offreLine.hidden = false;
+  }));
+  document.getElementById('offer-x').addEventListener('click', () => { offreIn.value = ''; offreLine.hidden = true; document.getElementById('f-lien').focus(); });
   const check = ([id, eid, test, msg]) => {
     const input = document.getElementById(id), err = document.getElementById(eid);
     const ok = test(input.value);
@@ -1671,7 +1745,8 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
     const label = btn.textContent; btn.textContent = 'Envoi en cours…';
     const data = Object.fromEntries(new FormData(form));
     delete data._next;
-    data._subject = `Aperçu gratuit : ${data.organisme.trim()}`;
+    data._subject = `Aperçu gratuit : ${data.organisme.trim()}` + (data.offre ? ` (${data.offre})` : '');
+    if (!data.offre) delete data.offre;
     fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
       .then(r => r.json().then(j => ({ ok: r.ok, j })))
       .then(({ ok, j }) => {

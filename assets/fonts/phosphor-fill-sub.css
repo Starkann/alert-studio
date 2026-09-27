@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Phosphor-Fill";
+  src: url("Phosphor-Fill-sub.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.ph-fill {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "Phosphor-Fill" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ph-fill.ph-arrow-counter-clockwise:before {
+  content: "\e038";
+}
+.ph-fill.ph-arrow-down-right:before {
+  content: "\e042";
+}
+.ph-fill.ph-arrow-left:before {
+  content: "\e058";
+}
+.ph-fill.ph-arrow-right:before {
+  content: "\e06c";
+}
+.ph-fill.ph-arrow-up-right:before {
+  content: "\e092";
+}
+.ph-fill.ph-check:before {
+  content: "\e182";
+}
+.ph-fill.ph-check-circle:before {
+  content: "\e184";
+}
+.ph-fill.ph-corners-out:before {
+  content: "\e1d0";
+}
+.ph-fill.ph-cube:before {
+  content: "\e1da";
+}
+.ph-fill.ph-device-mobile:before {
+  content: "\e1e0";
+}
+.ph-fill.ph-device-rotate:before {
+  content: "\edf2";
+}
+.ph-fill.ph-file-text:before {
+  content: "\e23a";
+}
+.ph-fill.ph-infinity:before {
+  content: "\e634";
+}
+.ph-fill.ph-lightbulb:before {
+  content: "\e2dc";
+}
+.ph-fill.ph-linkedin-logo:before {
+  content: "\e2ee";
+}
+.ph-fill.ph-list:before {
+  content: "\e2f0";
+}
+.ph-fill.ph-microphone:before {
+  content: "\e326";
+}
+.ph-fill.ph-note-pencil:before {
+  content: "\e34c";
+}
+.ph-fill.ph-palette:before {
+  content: "\e6c8";
+}
+.ph-fill.ph-pause:before {
+  content: "\e39e";
+}
+.ph-fill.ph-phone:before {
+  content: "\e3b8";
+}
+.ph-fill.ph-play:before {
+  content: "\e3d0";
+}
+.ph-fill.ph-plus:before {
+  content: "\e3d4";
+}
+.ph-fill.ph-speaker-high:before {
+  content: "\e44a";
+}
+.ph-fill.ph-speaker-slash:before {
+  content: "\e45a";
+}
+.ph-fill.ph-subtitles:before {
+  content: "\e1a8";
+}
+.ph-fill.ph-upload-simple:before {
+  content: "\e4c0";
+}
+.ph-fill.ph-warning-circle:before {
+  content: "\e4e2";
+}
+.ph-fill.ph-x:before {
+  content: "\e4f6";
+}
+.ph-fill.ph-youtube-logo:before {
+  content: "\e4fc";
+}
