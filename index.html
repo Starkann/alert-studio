@@ -540,6 +540,22 @@ section{position:relative}
   .js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .8s var(--out)}
   .js .rv.in{opacity:1;transform:none}
 }
+
+
+/* Rappels du tarif de lancement (offres) */
+.lt{align-self:flex-start;margin:-4px 0 -6px;padding:4px 8px;border:1px solid rgba(255,210,63,.6);border-radius:var(--r-xs);color:#FFD23F;font:500 .75rem/1 var(--fm);letter-spacing:.02em}
+.lt-in{justify-self:start;margin:0 0 2px}
+.launch-note{margin-top:16px;font-weight:600;color:var(--ink)}
+.launch-note+.tva{margin-top:4px}
+/* Bandeau offre de lancement */
+/* Jaune signal : teinte hors palette (orange = actions, sombre = contenu) pour isoler l'annonce */
+.launch{--launch:#FFD23F;background:var(--launch);color:#141410;border-bottom:1px solid #E6B800}
+.launch-in{margin:0;padding:9px 0;font-size:14.5px;line-height:1.45;text-align:center;font-weight:560}
+.launch-tag{display:inline-block;margin-right:10px;vertical-align:1px;font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--launch);background:#141410;border-radius:var(--r-xs);padding:3px 8px}
+.launch strong{font-weight:760}
+@media (max-width:767px){.launch-in{font-size:13.5px;padding:8px 0}}
+@media (max-width:479px){.launch-in{font-size:12.5px;padding:7px 0;letter-spacing:-.005em;white-space:nowrap}.launch-tag{margin-right:7px;padding:2px 6px;font-size:10px;letter-spacing:.05em}}
+@media (max-width:339px){.launch-in{white-space:normal}}
 </style>
 </head>
 <body>
@@ -570,6 +586,10 @@ section{position:relative}
     </div>
   </div>
 </header>
+
+<div class="launch" role="note" aria-label="Offre de lancement">
+  <p class="wrap launch-in"><span class="launch-tag">Lancement</span><span>Prix affichés réservés aux <strong>5 premiers clients</strong>.</span></p>
+</div>
 
 <main>
   <!-- En-tete -->
@@ -615,7 +635,7 @@ section{position:relative}
   <!-- Prix et delai -->
   <section class="facts" aria-label="Prix et délai">
     <div class="wrap facts-in">
-      <p class="fact"><span class="fact-big"><span class="hl hl-low">690&nbsp;€</span></span><span class="fact-sub bot">la capsule de 60&nbsp;s.</span></p>
+      <p class="fact"><span class="fact-big"><span class="hl hl-low">690&nbsp;€</span></span><span class="fact-sub bot">la capsule de 60&nbsp;s, tarif de lancement.</span></p>
       <p class="fact"><span class="fact-sub top">Livrée en</span><span class="fact-big">7&nbsp;jours ouvrés.</span></p>
       <p class="fact-txt">De votre côté&nbsp;: votre support, un appel de 20&nbsp;minutes et une relecture du script.</p>
     </div>
@@ -676,10 +696,12 @@ section{position:relative}
       <div class="offers">
         <article class="offer offer-a rv" aria-labelledby="o-presenter">
           <div class="offer-top"><h3 id="o-presenter">Présenter</h3><p class="mono">jusqu’à 60&nbsp;secondes</p></div>
+          <p class="lt">Tarif de lancement</p>
           <p class="price"><span class="hl hl-low">690</span><small>€</small></p>
           <p class="desc">Pour vos prospects&nbsp;: qu’ils comprennent, et qu’ils s’inscrivent.</p>
           <p class="desc muted">Sur votre fiche formation, en salon, en relance de devis.</p>
           <div class="pack">
+            <p class="lt lt-in">Tarif de lancement</p>
             <p><strong>Pack catalogue&nbsp;: 5&nbsp;vidéos pour 2&#8239;990&nbsp;€</strong> (598&nbsp;€ la vidéo).</p>
             <p>La première en 7&nbsp;jours ouvrés, puis une par semaine. 5&nbsp;vidéos au prix d’une seule chez le studio le plus cher de mon relevé.</p>
           </div>
@@ -689,6 +711,7 @@ section{position:relative}
         </article>
         <article class="offer offer-b rv" aria-labelledby="o-expliquer">
           <div class="offer-top"><h3 id="o-expliquer">Expliquer</h3><p class="mono">jusqu’à 90&nbsp;secondes</p></div>
+          <p class="lt">Tarif de lancement</p>
           <p class="price">1&#8239;290<small>€</small></p>
           <p class="desc">Pour vos stagiaires&nbsp;: qu’ils comprennent, et qu’ils retiennent.</p>
           <p class="desc muted">Plus d’écriture, pas seulement plus de durée&nbsp;: script vérifié, source réglementaire citée à l’écran si besoin. À envoyer avant la session, à revoir après.</p>
@@ -705,6 +728,7 @@ section{position:relative}
         <p class="c-d">Une série, un module e-learning, une autre durée, un reel pour vos réseaux.</p>
         <a class="link-arrow" href="#reserver">Échanger sur votre projet <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
       </article>
+      <p class="launch-note">Tarifs de lancement réservés aux 5 premiers clients.</p>
       <p class="tva mono">Prix nets&nbsp;: TVA non applicable, art.&nbsp;293&nbsp;B du CGI.</p>
     </div>
   </section>
@@ -820,6 +844,36 @@ section{position:relative}
         <div class="ex-meta">
           <h3>Capsule pédagogique IA</h3>
           <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <figure class="player" data-player data-mobile="p" data-dur="1:07" data-l="assets/mgmt-16x9.mp4" data-p="assets/mgmt-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/mgmt-16x9.mp4" poster="assets/posters/mgmt-16x9.jpg" aria-label="Capsule pédagogique management (paysage)"></video>
+              <video class="v-p" playsinline preload="none" poster="assets/posters/mgmt-9x16.jpg" aria-label="Capsule pédagogique management (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Capsule pédagogique</span><p class="cx-t">Recadrer sans braquer</p></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique management"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
+            <span class="time mono" aria-hidden="true">0:00 / 1:07</span>
+            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique management">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Capsule pédagogique management</h3>
+          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">1&nbsp;min&nbsp;07</span><span class="tag">1&#8239;290&nbsp;€</span></p>
         </div>
       </article>
 
@@ -1008,8 +1062,12 @@ section{position:relative}
           <p>Pas d’équipe à coordonner, pas de tournage, pas de comédien par défaut, et un format que je maîtrise. Vous payez l’écriture et l’animation, pas les réunions. La capsule en haut de page a été faite dans ces conditions. Jugez sur pièce.</p>
         </details>
         <details>
+          <summary>Pourquoi un tarif de lancement&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <p>Alert Studio démarre. Les 5 premiers clients bénéficient de ces prix en échange de leur retour sur notre collaboration. Les tarifs seront revus ensuite.</p>
+        </details>
+        <details>
           <summary>Le prix peut-il changer&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
-          <p>Non. Le prix affiché est le prix payé, retouches comprises. Seule une demande en plus (autre durée, doublage professionnel, autre langue) fait l’objet d’un devis, validé avant.</p>
+          <p>Non. Le prix affiché au moment de votre commande est le prix payé, retouches comprises. Seule une demande en plus (autre durée, doublage professionnel, autre langue) fait l’objet d’un devis, validé avant.</p>
         </details>
         <details>
           <summary>Que dois-je fournir&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
