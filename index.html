@@ -390,6 +390,15 @@ section{position:relative}
 }
 @keyframes sp{from{transform:scaleX(.15)}to{transform:scaleX(1)}}
 
+
+/* Miniatures de la librairie : format + sujet sur l'image d'apercu, jusqu'a la premiere lecture */
+.ex-card .frame{container-type:inline-size}
+.cover-ex{background:linear-gradient(180deg,rgba(10,10,8,.38) 0%,rgba(10,10,8,.5) 45%,rgba(10,10,8,.9) 100%);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.cx-tag{position:absolute;left:5cqw;top:5cqw;padding:.35em .7em;border-radius:var(--r-xs);background:var(--accent);color:var(--on-accent);font:500 clamp(.72rem,3.2cqw,.9rem)/1 var(--fm)}
+.cx-t{position:absolute;left:5cqw;right:5cqw;bottom:5cqw;margin:0;color:#fff;font-weight:800;font-stretch:78%;font-size:clamp(1.35rem,8.5cqw,2.6rem);line-height:1;letter-spacing:-.02em;text-wrap:balance;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.ex-card .cover ~ .bigplay{left:50%;top:44%;width:clamp(52px,15cqw,76px);height:clamp(52px,15cqw,76px);font-size:clamp(22px,6cqw,32px);background:rgba(20,20,17,.78);border:1.5px solid rgba(255,255,255,.35)}
+.ex-card .player.is-started .bigplay{display:none!important}
+
 /* Methode : frise type Gantt */
 .methode h2{max-width:16ch}
 .gantt{margin-top:40px}
@@ -759,14 +768,15 @@ section{position:relative}
             <span class="ghost ghost-l" aria-hidden="true"></span>
             <span class="ghost ghost-p" aria-hidden="true"></span>
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/caces-16x9.mp4" poster="assets/posters/caces-16x9.jpg" aria-label="Parcours CACES R489 (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/caces-9x16.jpg" aria-label="Parcours CACES R489 (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/caces-16x9.mp4" poster="assets/posters/caces-16x9.jpg" aria-label="Fiche formation CACES R489 (paysage)"></video>
+              <video class="v-p" playsinline preload="none" poster="assets/posters/caces-9x16.jpg" aria-label="Fiche formation CACES R489 (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Fiche formation</span><p class="cx-t">CACES R489</p></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
           <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : Parcours CACES R489"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : fiche formation CACES R489"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
             <span class="time mono" aria-hidden="true">0:00 / 0:40</span>
             <div class="seg" role="group" aria-label="Format de la vidéo Parcours CACES R489">
@@ -777,8 +787,8 @@ section{position:relative}
           </div>
         </figure>
         <div class="ex-meta">
-          <h3>Parcours CACES R489</h3>
-          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">40&nbsp;s</span><span class="tag">690&nbsp;€</span><span class="tag">Fiche formation</span></p>
+          <h3>Fiche formation CACES R489</h3>
+          <p class="tags"><span class="tag acc">Présenter</span><span class="tag">40&nbsp;s</span><span class="tag">690&nbsp;€</span></p>
         </div>
       </article>
       <article class="ex-card">
@@ -787,14 +797,15 @@ section{position:relative}
             <span class="ghost ghost-l" aria-hidden="true"></span>
             <span class="ghost ghost-p" aria-hidden="true"></span>
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/ia-16x9.mp4" poster="assets/posters/ia-16x9.jpg" aria-label="Vérifier avant de croire&nbsp;: l’IA au travail (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/ia-9x16.jpg" aria-label="Vérifier avant de croire&nbsp;: l’IA au travail (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/ia-16x9.mp4" poster="assets/posters/ia-16x9.jpg" aria-label="Capsule pédagogique IA (paysage)"></video>
+              <video class="v-p" playsinline preload="none" poster="assets/posters/ia-9x16.jpg" aria-label="Capsule pédagogique IA (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Capsule pédagogique</span><p class="cx-t">L’IA au travail</p></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
           <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : Vérifier avant de croire"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique IA"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
             <span class="time mono" aria-hidden="true">0:00 / 0:47</span>
             <div class="seg" role="group" aria-label="Format de la vidéo Vérifier avant de croire">
@@ -805,8 +816,8 @@ section{position:relative}
           </div>
         </figure>
         <div class="ex-meta">
-          <h3>Vérifier avant de croire&nbsp;: l’IA au travail</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span><span class="tag">Avant la session</span></p>
+          <h3>Capsule pédagogique IA</h3>
+          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">47&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
         </div>
       </article>
       <article class="ex-card">
@@ -815,14 +826,15 @@ section{position:relative}
             <span class="ghost ghost-l" aria-hidden="true"></span>
             <span class="ghost ghost-p" aria-hidden="true"></span>
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/reel-16x9.mp4" poster="assets/posters/reel-16x9.jpg" aria-label="Reel de 15&nbsp;s&nbsp;: ça bouge, ça claque (paysage)"></video>
-              <video class="v-p" playsinline preload="none" poster="assets/posters/reel-9x16.jpg" aria-label="Reel de 15&nbsp;s&nbsp;: ça bouge, ça claque (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/reel-16x9.mp4" poster="assets/posters/reel-16x9.jpg" aria-label="Motion design de présentation (paysage)"></video>
+              <video class="v-p" playsinline preload="none" poster="assets/posters/reel-9x16.jpg" aria-label="Motion design de présentation (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Motion design</span><p class="cx-t">Présentation du studio</p></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
           <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : Reel de 15 secondes"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : motion design de présentation"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
             <span class="time mono" aria-hidden="true">0:00 / 0:15</span>
             <div class="seg" role="group" aria-label="Format de la vidéo Reel de 15 secondes">
@@ -833,29 +845,30 @@ section{position:relative}
           </div>
         </figure>
         <div class="ex-meta">
-          <h3>Reel de 15&nbsp;s&nbsp;: ça bouge, ça claque.</h3>
-          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">15&nbsp;s</span><span class="tag">Sur devis</span><span class="tag">Réseaux sociaux</span></p>
+          <h3>Motion design de présentation</h3>
+          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">15&nbsp;s</span><span class="tag">Sur devis</span></p>
         </div>
       </article>
       <article class="ex-card minor">
         <figure class="player" data-player data-dur="1:42" data-l="assets/rgpd-16x9.mp4">
           <div class="scene">
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/rgpd-16x9.mp4" poster="assets/posters/rgpd-16x9.jpg" aria-label="Les 5 réflexes RGPD au bureau"></video>
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/rgpd-16x9.mp4" poster="assets/posters/rgpd-16x9.jpg" aria-label="Module e-learning RGPD"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">E-learning</span><p class="cx-t">RGPD au bureau</p></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
           <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : Les 5 réflexes RGPD au bureau"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : module e-learning RGPD"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
             <span class="time mono" aria-hidden="true">0:00 / 1:42</span>
             <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
           </div>
         </figure>
         <div class="ex-meta">
-          <h3>Les 5 réflexes RGPD au bureau</h3>
-          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">1&nbsp;min&nbsp;42</span><span class="tag">Sur devis</span><span class="tag">Module e-learning</span></p>
+          <h3>Module e-learning RGPD</h3>
+          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">1&nbsp;min&nbsp;42</span><span class="tag">Sur devis</span></p>
         </div>
       </article>
     </div>
