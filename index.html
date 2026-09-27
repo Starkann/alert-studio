@@ -558,6 +558,7 @@ section{position:relative}
 .v-facts dt{color:var(--ink-3)}
 .v-facts dd{margin:0;font-weight:640}
 .v-player .scene{aspect-ratio:16/9}
+.v-player[data-single] .scene{aspect-ratio:16/9!important;width:100%!important}
 .v-player .frame{border:clamp(6px,1vw,10px) solid #1C1C19;box-shadow:0 0 0 1.5px #34342E;border-radius:calc(var(--fr) + 4px)}
 .v-player .bigplay{display:grid;left:50%;top:50%;bottom:auto;width:72px;height:72px;transform:translate(-50%,-50%);border-radius:50%;font-size:30px}
 .v-player .bigplay:hover{transform:translate(-50%,-50%) scale(1.05)}
@@ -746,22 +747,22 @@ section{position:relative}
   <!-- Exemples : librairie -->
   <section class="exemples sec" id="exemples" aria-labelledby="h-exemples">
     <div class="wrap vedette" id="vedette">
-      <figure class="player v-player" data-player data-lazy data-mobile="p" data-dur="0:32" data-l="assets/cyber-16x9.mp4" data-p="assets/cyber-9x16.mp4">
+      <figure class="player v-player" data-player data-lazy data-mobile="p" data-dur="0:45" data-l="assets/courbe-16x9.mp4" data-p="assets/courbe-9x16.mp4">
         <div class="scene">
           <span class="ghost ghost-l" aria-hidden="true"></span>
           <span class="ghost ghost-p" aria-hidden="true"></span>
           <div class="frame">
-            <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité : hameçonnage (paysage)"></video>
-            <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité : hameçonnage (vertical)" aria-hidden="true" tabindex="-1"></video>
+            <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique : la courbe de l’oubli (paysage)"></video>
+            <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique : la courbe de l’oubli (vertical)" aria-hidden="true" tabindex="-1"></video>
             <span class="prog" aria-hidden="true"></span>
             <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
           </div>
         </div>
         <div class="ctrls">
-          <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule hameçonnage"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+          <button class="cbtn" type="button" data-act="play" aria-label="Lire : la courbe de l’oubli"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
           <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
-          <span class="time mono" aria-hidden="true">0:00 / 0:32</span>
-          <div class="seg" role="group" aria-label="Format de la vidéo : capsule hameçonnage">
+          <span class="time mono" aria-hidden="true">0:00 / 0:45</span>
+          <div class="seg" role="group" aria-label="Format de la vidéo : la courbe de l’oubli">
             <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
             <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
           </div>
@@ -769,13 +770,13 @@ section{position:relative}
         </div>
       </figure>
       <div class="v-copy">
-        <p class="v-kicker mono">Capsule pédagogique, cybersécurité</p>
-        <h2 id="h-exemples" class="rv">32 secondes pour ne plus mordre à l’hameçon.</h2>
-        <p class="v-lead">Voilà ce que vous recevez pour 1&#8239;290&nbsp;€, tarif de lancement&nbsp;: une capsule Expliquer, pour vos stagiaires, en paysage et en vertical.</p>
+        <p class="v-kicker mono">Capsule pédagogique, la courbe de l’oubli</p>
+        <h2 id="h-exemples" class="rv">Formez une fois. Ancrez trois fois.</h2>
+        <p class="v-lead">Voilà ce que vous recevez pour 1&#8239;290&nbsp;€, tarif de lancement&nbsp;: une capsule Expliquer qui fait retenir, pas seulement comprendre.</p>
         <dl class="v-facts">
-          <div><dt>Formats</dt><dd>Paysage + vertical</dd></div>
-          <div><dt>Durée</dt><dd>32&nbsp;s</dd></div>
-          <div><dt>Rendu</dt><dd>3D animée (selon le sujet)</dd></div>
+          <div><dt>Durée</dt><dd>45&nbsp;s</dd></div>
+          <div><dt>Rendu</dt><dd>3D et papier découpé (selon le sujet)</dd></div>
+          <div><dt>Formats livrés</dt><dd>Paysage + vertical</dd></div>
         </dl>
         <a class="btn btn-primary" href="#form" data-offre="Expliquer, 1 290 €">Recevoir mon aperçu gratuit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
       </div>
@@ -790,6 +791,34 @@ section{position:relative}
     </div>
 
     <div class="strip" role="region" aria-label="Exemples de vidéos" tabindex="0">
+      <article class="ex-card">
+        <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:32" data-l="assets/cyber-16x9.mp4" data-p="assets/cyber-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique cybersécurité"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique cybersécurité">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Capsule pédagogique cybersécurité</h3>
+          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">32&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
+        </div>
+      </article>
+
       <article class="ex-card">
         <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:27" data-l="assets/sst-16x9.mp4" data-p="assets/sst-9x16.mp4">
           <div class="scene">
@@ -1255,7 +1284,7 @@ section{position:relative}
   <div class="wrap">
     <div class="foot-in">
       <img src="assets/brand/logo-wordmark-clair-2x.png" alt="Alert Studio" width="351" height="64" loading="lazy" decoding="async">
-      <span>Hugo Pilard</span>
+      <span>Hugo Pilard · <a class="dom" href="https://starkann.github.io/alert-studio/">alert-studio.fr</a></span>
       <a href="mailto:hugopilardece@gmail.com">hugopilardece@gmail.com</a>
       <a data-booking href="#apercu">Réserver un appel de 20&nbsp;minutes<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
       <a href="mentions-legales.html">Mentions légales</a>
