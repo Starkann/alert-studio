@@ -823,11 +823,14 @@ section{position:relative}
         </div>
       </article>
 
-      <article class="ex-card minor">
-        <figure class="player" data-player data-dur="0:27" data-l="assets/sst-16x9.mp4">
+      <article class="ex-card">
+        <figure class="player" data-player data-mobile="p" data-dur="0:27" data-l="assets/sst-16x9.mp4" data-p="assets/sst-9x16.mp4">
           <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="metadata" src="assets/sst-16x9.mp4" poster="assets/posters/sst-16x9.jpg" aria-label="Fiche formation SST"></video>
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/sst-16x9.mp4" poster="assets/posters/sst-16x9.jpg" aria-label="Fiche formation SST (paysage)"></video>
+              <video class="v-p" playsinline preload="none" poster="assets/posters/sst-9x16.jpg" aria-label="Fiche formation SST (vertical)" aria-hidden="true" tabindex="-1"></video>
               <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Fiche formation</span><p class="cx-t">SST</p></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
@@ -837,6 +840,10 @@ section{position:relative}
             <button class="cbtn" type="button" data-act="play" aria-label="Lire : fiche formation SST"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
             <span class="time mono" aria-hidden="true">0:00 / 0:27</span>
+            <div class="seg" role="group" aria-label="Format de la vidéo : fiche formation SST">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
             <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
           </div>
         </figure>
@@ -870,6 +877,36 @@ section{position:relative}
       </article>
 
       <article class="ex-card">
+        <figure class="player" data-player data-mobile="p" data-dur="0:44" data-l="assets/crm-16x9.mp4" data-p="assets/crm-9x16.mp4">
+          <div class="scene">
+            <span class="ghost ghost-l" aria-hidden="true"></span>
+            <span class="ghost ghost-p" aria-hidden="true"></span>
+            <div class="frame">
+              <video class="v-l is-on" playsinline preload="metadata" src="assets/crm-16x9.mp4" poster="assets/posters/crm-16x9.jpg" aria-label="Présentation d’entreprise CR&amp;M audit (paysage)"></video>
+              <video class="v-p" playsinline preload="none" poster="assets/posters/crm-9x16.jpg" aria-label="Présentation d’entreprise CR&amp;M audit (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <div class="cover cover-ex" aria-hidden="true"><span class="cx-tag">Présentation d’entreprise</span><p class="cx-t">CR&amp;M audit</p></div>
+              <span class="prog" aria-hidden="true"></span>
+              <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
+            </div>
+          </div>
+          <div class="ctrls">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : présentation d’entreprise CR&amp;M audit"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
+            <span class="time mono" aria-hidden="true">0:00 / 0:44</span>
+            <div class="seg" role="group" aria-label="Format de la vidéo : présentation d’entreprise CR&amp;M audit">
+              <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
+              <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
+            </div>
+            <button class="cbtn" type="button" data-act="fs" aria-label="Plein écran"><i class="ph ph-corners-out" aria-hidden="true"></i></button>
+          </div>
+        </figure>
+        <div class="ex-meta">
+          <h3>Présentation d’entreprise CR&amp;M audit</h3>
+          <p class="tags"><span class="tag acc">Sur mesure</span><span class="tag">44&nbsp;s</span><span class="tag">Sur devis</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
         <figure class="player" data-player data-mobile="p" data-dur="0:15" data-l="assets/reel-16x9.mp4" data-p="assets/reel-9x16.mp4">
           <div class="scene">
             <span class="ghost ghost-l" aria-hidden="true"></span>
@@ -886,7 +923,7 @@ section{position:relative}
             <button class="cbtn" type="button" data-act="play" aria-label="Lire : motion design de présentation"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
             <button class="cbtn" type="button" data-act="mute" aria-label="Couper le son"><i class="ph ph-speaker-high" aria-hidden="true"></i></button>
             <span class="time mono" aria-hidden="true">0:00 / 0:15</span>
-            <div class="seg" role="group" aria-label="Format de la vidéo Reel de 15 secondes">
+            <div class="seg" role="group" aria-label="Format de la vidéo : motion design de présentation">
               <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
               <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
             </div>
