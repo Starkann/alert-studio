@@ -725,6 +725,26 @@ section{position:relative}
 .mini-ba .pi{flex:1;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line-2)}
 .mini-ba img{display:block;width:100%;height:auto}
 .mini-arrow{color:var(--accent);font-size:22px}
+
+/* Tour 4 : envoi de la video (fichier ou lien) */
+.src-q{font-weight:620;font-size:.9375rem}
+.src-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px;border-radius:var(--r-sm);background:var(--paper-2);border:1px solid var(--line)}
+.src-tabs button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;border:0;border-radius:7px;background:transparent;color:var(--ink-2);font:600 .9rem/1.1 var(--ff);cursor:pointer}
+.src-tabs button[aria-selected="true"]{background:var(--sheet);color:var(--ink);box-shadow:0 1px 0 var(--line-2),0 0 0 1px var(--line-2)}
+.src-tabs i{font-size:18px;color:var(--accent)}
+.src-panel{display:grid;gap:8px;margin-top:4px}
+.src-panel[hidden]{display:none}
+.drop{position:relative;display:grid;justify-items:center;gap:6px;padding:22px 16px;border:1.5px dashed var(--line-2);border-radius:var(--r-md);background:var(--field);text-align:center;cursor:pointer;transition:border-color .2s,background .2s}
+.drop:hover,.drop.is-over{border-color:var(--accent);background:rgba(var(--acc-rgb),.05)}
+.drop[hidden]{display:none}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.drop i{font-size:30px;color:var(--accent)}
+.drop-t{color:var(--ink-2)}.drop-t strong{color:var(--ink)}
+.drop-n{font:500 .8125rem/1.3 var(--fm);color:var(--ink)}
+.drop:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:3px}
+.upbar{height:8px;border-radius:8px;background:var(--paper-2);overflow:hidden}
+.upbar[hidden]{display:none}
+.upbar span{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
 /* Bandeau offre de lancement */
 /* Jaune signal : teinte hors palette (orange = actions, sombre = contenu) pour isoler l'annonce */
 .launch{--launch:var(--banner);background:var(--launch);color:var(--banner-ink);border-bottom:1px solid var(--banner-edge)}
@@ -940,35 +960,35 @@ section{position:relative}
     </div>
   </section>
 
-  <!-- Offre secondaire : capsules creees de zero -->
+  <!-- Offre secondaire : videos creees de zero -->
   <section class="exemples capsules sec" id="capsules" aria-labelledby="h-lib">
     <div class="wrap ex-head">
       <div>
         <h2 id="h-lib" class="rv lib-title">Pas encore de vidéo&nbsp;? On la crée.</h2>
-        <p class="lib-sub">Capsules animées de zéro, script vérifié et voix comprise. Présenter (60&nbsp;s)&nbsp;: 690&nbsp;€. Expliquer (90&nbsp;s)&nbsp;: 1&#8239;290&nbsp;€.</p>
+        <p class="lib-sub">Je la crée de zéro&nbsp;: script vérifié, animation, voix et musique. <strong>390&nbsp;€ la vidéo de présentation, jusqu’à 90&nbsp;secondes.</strong></p>
       </div>
       <div class="ex-nav">
         <button class="cbtn ex-prev" type="button" aria-label="Exemple précédent" disabled><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
         <button class="cbtn ex-next" type="button" aria-label="Exemple suivant"><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
       </div>
     </div>
-    <div class="strip" role="region" aria-label="Exemples de capsules" tabindex="0">
+    <div class="strip" role="region" aria-label="Exemples de vidéos créées de zéro" tabindex="0">
       <article class="ex-card">
         <figure class="player" data-player data-lazy data-mobile="p" data-dur="0:45" data-l="assets/courbe-16x9.mp4" data-p="assets/courbe-9x16.mp4">
           <div class="scene">
             <span class="ghost ghost-l" aria-hidden="true"></span>
             <span class="ghost ghost-p" aria-hidden="true"></span>
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique, la courbe de l’oubli (paysage)"></video>
-              <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique, la courbe de l’oubli (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <video class="v-l is-on" playsinline preload="none" aria-label="Vidéo pédagogique, la courbe de l’oubli (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Vidéo pédagogique, la courbe de l’oubli (vertical)" aria-hidden="true" tabindex="-1"></video>
               <div class="cover cover-ex" aria-hidden="true"></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
           <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique, la courbe de l’oubli"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique, la courbe de l’oubli">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : vidéo pédagogique, la courbe de l’oubli"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : vidéo pédagogique, la courbe de l’oubli">
               <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
               <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
             </div>
@@ -976,8 +996,8 @@ section{position:relative}
           </div>
         </figure>
         <div class="ex-meta">
-          <h3>Capsule pédagogique, la courbe de l’oubli</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">45&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
+          <h3>Vidéo pédagogique, la courbe de l’oubli</h3>
+          <p class="tags"><span class="tag">45&nbsp;s</span><span class="tag">Créée de zéro</span></p>
         </div>
       </article>
 
@@ -987,16 +1007,16 @@ section{position:relative}
             <span class="ghost ghost-l" aria-hidden="true"></span>
             <span class="ghost ghost-p" aria-hidden="true"></span>
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité (paysage)"></video>
-              <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique cybersécurité (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <video class="v-l is-on" playsinline preload="none" aria-label="Vidéo pédagogique cybersécurité (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Vidéo pédagogique cybersécurité (vertical)" aria-hidden="true" tabindex="-1"></video>
               <div class="cover cover-ex" aria-hidden="true"></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
           <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique cybersécurité"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique cybersécurité">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : vidéo pédagogique cybersécurité"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : vidéo pédagogique cybersécurité">
               <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
               <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
             </div>
@@ -1004,8 +1024,8 @@ section{position:relative}
           </div>
         </figure>
         <div class="ex-meta">
-          <h3>Capsule pédagogique cybersécurité</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">32&nbsp;s</span><span class="tag">1&#8239;290&nbsp;€</span></p>
+          <h3>Vidéo pédagogique cybersécurité</h3>
+          <p class="tags"><span class="tag">32&nbsp;s</span><span class="tag">Créée de zéro</span></p>
         </div>
       </article>
 
@@ -1015,16 +1035,16 @@ section{position:relative}
             <span class="ghost ghost-l" aria-hidden="true"></span>
             <span class="ghost ghost-p" aria-hidden="true"></span>
             <div class="frame">
-              <video class="v-l is-on" playsinline preload="none" aria-label="Capsule pédagogique management (paysage)"></video>
-              <video class="v-p" playsinline preload="none" aria-label="Capsule pédagogique management (vertical)" aria-hidden="true" tabindex="-1"></video>
+              <video class="v-l is-on" playsinline preload="none" aria-label="Vidéo pédagogique management (paysage)"></video>
+              <video class="v-p" playsinline preload="none" aria-label="Vidéo pédagogique management (vertical)" aria-hidden="true" tabindex="-1"></video>
               <div class="cover cover-ex" aria-hidden="true"></div>
               <span class="prog" aria-hidden="true"></span>
               <button class="bigplay" type="button" tabindex="-1" aria-hidden="true"><i class="ph-fill ph-play"></i></button>
             </div>
           </div>
           <div class="ctrls">
-            <button class="cbtn" type="button" data-act="play" aria-label="Lire : capsule pédagogique management"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
-            <div class="seg" role="group" aria-label="Format de la vidéo : capsule pédagogique management">
+            <button class="cbtn" type="button" data-act="play" aria-label="Lire : vidéo pédagogique management"><i class="ph-fill ph-play" aria-hidden="true"></i></button>
+            <div class="seg" role="group" aria-label="Format de la vidéo : vidéo pédagogique management">
               <button type="button" data-o="l" aria-pressed="true" title="Paysage"><i class="ph ph-device-mobile land" aria-hidden="true"></i><span class="sr-only">Paysage</span></button>
               <button type="button" data-o="p" aria-pressed="false" title="Vertical"><i class="ph ph-device-mobile" aria-hidden="true"></i><span class="sr-only">Vertical</span></button>
             </div>
@@ -1032,8 +1052,8 @@ section{position:relative}
           </div>
         </figure>
         <div class="ex-meta">
-          <h3>Capsule pédagogique management</h3>
-          <p class="tags"><span class="tag acc">Expliquer</span><span class="tag">1&nbsp;min&nbsp;07</span><span class="tag">1&#8239;290&nbsp;€</span></p>
+          <h3>Vidéo pédagogique management</h3>
+          <p class="tags"><span class="tag">1&nbsp;min&nbsp;07</span><span class="tag">Créée de zéro</span></p>
         </div>
       </article>
     </div>
@@ -1084,7 +1104,7 @@ section{position:relative}
         </details>
         <details>
           <summary>Comment se passe le paiement&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
-          <p>Pour le remontage&nbsp;: à la livraison de chaque lot, uniquement pour les vidéos que vous avez validées. Pas d’acompte. Les capsules créées de zéro gardent un acompte de 50&nbsp;%.</p>
+          <p>Pour le remontage&nbsp;: à la livraison de chaque lot, uniquement pour les vidéos que vous avez validées. Pas d’acompte. Pour une vidéo créée de zéro&nbsp;: acompte de 50&nbsp;% à la commande.</p>
         </details>
         <details>
           <summary>Que recevons-nous exactement&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
@@ -1092,7 +1112,7 @@ section{position:relative}
         </details>
         <details>
           <summary>Et si nous n’avons pas encore de vidéo&nbsp;?<i class="ph ph-plus" aria-hidden="true"></i></summary>
-          <p>Je crée une capsule animée de zéro, à partir de 690&nbsp;€. <a href="#capsules">Voir les exemples</a>.</p>
+          <p>Je la crée de zéro&nbsp;: 390&nbsp;€ la vidéo de présentation, jusqu’à 90&nbsp;secondes. <a href="#capsules">Voir les exemples</a>.</p>
         </details>
       </div>
     </div>
@@ -1104,7 +1124,7 @@ section{position:relative}
       <div class="final-copy">
         <h2 id="h-final" class="rv">Envoyez une vidéo. Recevez-la <span class="hl">remontée</span> sous 48&nbsp;h.</h2>
         <p>Offerte, sans engagement. Vous la comparez à l’originale, puis vous décidez.</p>
-        <div class="mini-ba" aria-hidden="true"><span class="pi"><img src="assets/posters/immo-avant-15-3.jpg" alt="" loading="lazy" width="1280" height="720"><span class="pi-lab">Avant</span></span><i class="ph ph-arrow-right mini-arrow"></i><span class="pi"><img src="assets/posters/immo-apres-15-3.jpg" alt="" loading="lazy" width="1280" height="720"><span class="pi-lab pi-after">Après</span></span></div>
+        <div class="mini-ba" aria-hidden="true"><span class="pi"><img src="assets/posters/immo-avant-15-12.jpg" alt="" loading="lazy" width="1280" height="720"><span class="pi-lab">Avant</span></span><i class="ph ph-arrow-right mini-arrow"></i><span class="pi"><img src="assets/posters/immo-apres-15-12.jpg" alt="" loading="lazy" width="1280" height="720"><span class="pi-lab pi-after">Après</span></span></div>
         <div class="book" id="reserver">
           <p class="book-q">Vous préférez en parler de vive voix&nbsp;?</p>
           <a class="btn btn-line" data-booking href="#apercu">Réserver un appel de 20&nbsp;minutes<span class="sr-only"> (s’ouvre dans un nouvel onglet)</span></a>
@@ -1122,12 +1142,30 @@ section{position:relative}
         <p class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
         <p class="offer-line" id="offer-line" role="status" hidden><span id="offer-txt"></span> <button type="button" class="offer-x" id="offer-x">Changer</button></p>
         <input type="hidden" name="offre" id="f-offre" value="">
-        <div class="field">
-          <label for="f-lien">Le lien de votre vidéo</label>
-          <input id="f-lien" name="video" type="url" inputmode="url" autocomplete="url" spellcheck="false" maxlength="500" required aria-describedby="h-lien e-lien" placeholder="https://…">
-          <p class="help" id="h-lien">YouTube, Vimeo, Google Drive, Dropbox, OneDrive ou votre plateforme. Le lien doit être ouvert à toute personne qui l’a.</p>
-          <p class="help help-file"><i class="ph ph-upload-simple" aria-hidden="true"></i> Vidéo sur votre ordinateur&nbsp;? Envoyez-la gratuitement avec <a href="https://wetransfer.com" target="_blank" rel="noopener">WeTransfer</a> (sans compte), puis collez ici le lien reçu.</p>
-          <p class="err" id="e-lien" aria-live="polite"></p>
+        <div class="field src-field">
+          <p class="src-q">Votre vidéo</p>
+          <div class="src-tabs" role="tablist" aria-label="Comment envoyer votre vidéo">
+            <button type="button" role="tab" id="t-file" aria-selected="true" aria-controls="p-file"><i class="ph ph-upload-simple" aria-hidden="true"></i>Depuis mon ordinateur</button>
+            <button type="button" role="tab" id="t-link" aria-selected="false" aria-controls="p-link"><i class="ph ph-link" aria-hidden="true"></i>Un lien</button>
+          </div>
+          <div class="src-panel" id="p-file" role="tabpanel" aria-labelledby="t-file">
+            <label class="drop" for="f-file">
+              <input id="f-file" type="file" accept=".mp4,.mov,.m4v,.webm,.mkv,.avi,video/*" aria-describedby="h-file e-file">
+              <i class="ph ph-upload-simple" aria-hidden="true"></i>
+              <span class="drop-t"><strong>Choisir un fichier vidéo</strong> ou le glisser ici</span>
+              <span class="drop-n" id="drop-n"></span>
+            </label>
+            <p class="help" id="h-file">MP4, MOV, M4V, WEBM, MKV ou AVI, jusqu’à 2&nbsp;Go. Envoi sécurisé.</p>
+            <div class="upbar" id="upbar" hidden><span></span></div>
+            <p class="err" id="e-file" aria-live="polite"></p>
+          </div>
+          <div class="src-panel" id="p-link" role="tabpanel" aria-labelledby="t-link" hidden>
+            <label class="sr-only" for="f-lien">Le lien de votre vidéo</label>
+            <input id="f-lien" name="video" type="url" inputmode="url" autocomplete="url" spellcheck="false" maxlength="500" aria-describedby="h-lien e-lien" placeholder="https://…">
+            <p class="help" id="h-lien">YouTube, Vimeo, Google Drive, Dropbox, OneDrive ou votre plateforme. Le lien doit être ouvert à toute personne qui l’a.</p>
+            <p class="err" id="e-lien" aria-live="polite"></p>
+          </div>
+          <input type="hidden" name="fichier" id="f-fichier" value="">
         </div>
         <div class="field">
           <label for="f-pass">Passage à remonter <span class="opt">(facultatif)</span></label>
@@ -1673,7 +1711,7 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
   const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hugopilardece@gmail.com';
   const rules = [
     /* Lien OU description courte : l'un des deux suffit */
-    ['f-lien', 'e-lien', v => safeLink(v) === '', v => safeLink(v)],
+    ['f-lien', 'e-lien', v => srcMode() === 'file' || safeLink(v) === '', v => safeLink(v)],
     ['f-org', 'e-org', v => v.trim().length > 1, 'Indiquez le nom de votre organisme.'],
     ['f-nom', 'e-nom', v => v.trim().length > 1, 'Indiquez votre nom.'],
     ['f-mail', 'e-mail', v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()), 'Cette adresse e-mail semble incomplète.']
@@ -1697,6 +1735,57 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
     if (BAD.test(u.pathname)) return 'Ce type de fichier n’est pas accepté : envoyez un lien vers la vidéo elle-même.';
     return '';
   };
+  /* ---------- Envoi de fichier : depot direct dans le Google Drive de Hugo (script Google Apps Script) ---------- */
+  const UPLOAD_ENDPOINT = ''; /* URL du script deploye ; vide = onglet fichier remplace par l'envoi via WeTransfer */
+  const MAX_SIZE = 2 * 1024 * 1024 * 1024;
+  const VIDEO_EXT = /\.(mp4|mov|m4v|webm|mkv|avi)$/i;
+  const tFile = document.getElementById('t-file'), tLink = document.getElementById('t-link');
+  const pFile = document.getElementById('p-file'), pLink = document.getElementById('p-link');
+  const fFile = document.getElementById('f-file'), eFile = document.getElementById('e-file'), dropN = document.getElementById('drop-n');
+  const upbar = document.getElementById('upbar');
+  const srcMode = () => tFile.getAttribute('aria-selected') === 'true' ? 'file' : 'link';
+  const setMode = m => {
+    tFile.setAttribute('aria-selected', String(m === 'file')); tLink.setAttribute('aria-selected', String(m === 'link'));
+    pFile.hidden = m !== 'file'; pLink.hidden = m !== 'link';
+  };
+  tFile.addEventListener('click', () => setMode('file')); tLink.addEventListener('click', () => setMode('link'));
+  if (!UPLOAD_ENDPOINT) {
+    setMode('link');
+    pFile.querySelector('.drop').hidden = true;
+    pFile.querySelector('#h-file').innerHTML = 'Envoyez-la gratuitement avec <a href="https://wetransfer.com" target="_blank" rel="noopener">WeTransfer</a> (sans compte), puis collez le lien reçu dans l’onglet «&nbsp;Un lien&nbsp;».';
+  }
+  const fileError = f => {
+    if (!f) return 'Choisissez un fichier vidéo.';
+    if (!VIDEO_EXT.test(f.name) || (f.type && !/^video\//.test(f.type))) return 'Ce fichier n’est pas une vidéo acceptée (MP4, MOV, M4V, WEBM, MKV ou AVI).';
+    if (f.size > MAX_SIZE) return 'Ce fichier dépasse 2 Go : envoyez plutôt un lien.';
+    if (f.size < 10 * 1024) return 'Ce fichier semble vide.';
+    return '';
+  };
+  const showFile = () => {
+    const f = fFile.files[0], m = fileError(f);
+    dropN.textContent = f ? `${f.name} · ${(f.size / 1048576).toFixed(1)} Mo` : '';
+    eFile.innerHTML = f && m ? `<i class="ph ph-warning-circle" aria-hidden="true"></i>${m}` : '';
+  };
+  fFile.addEventListener('change', showFile);
+  const drop = pFile.querySelector('.drop');
+  ['dragover', 'dragenter'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('is-over'); }));
+  ['dragleave', 'drop'].forEach(t => drop.addEventListener(t, () => drop.classList.remove('is-over')));
+  drop.addEventListener('drop', e => { e.preventDefault(); if (e.dataTransfer.files.length) { fFile.files = e.dataTransfer.files; showFile(); } });
+  const uploadFile = async f => {
+    const r = await fetch(UPLOAD_ENDPOINT, { method: 'POST', body: JSON.stringify({ name: f.name, size: f.size, type: f.type || 'video/mp4', origin: location.origin }) });
+    const j = await r.json();
+    if (!j.ok) throw new Error(j.error || 'session');
+    upbar.hidden = false;
+    const meta = await new Promise((res, rej) => {
+      const x = new XMLHttpRequest();
+      x.open('PUT', j.uploadUrl);
+      x.upload.onprogress = e => { if (e.lengthComputable) upbar.firstElementChild.style.width = (e.loaded / e.total * 100).toFixed(1) + '%'; };
+      x.onload = () => (x.status >= 200 && x.status < 300) ? res(JSON.parse(x.responseText || '{}')) : rej(new Error('upload ' + x.status));
+      x.onerror = () => rej(new Error('réseau'));
+      x.send(f);
+    });
+    return meta.id ? `https://drive.google.com/file/d/${meta.id}/view` : 'fichier déposé (voir le dossier Drive)';
+  };
   const check = ([id, eid, test, msg]) => {
     const input = document.getElementById(id), err = document.getElementById(eid);
     const ok = test(input.value);
@@ -1715,7 +1804,7 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
   fl.addEventListener('blur', fixScheme);
   form.addEventListener('submit', fixScheme, true);
   form.addEventListener('focusin', () => { if (!tStart) tStart = Date.now(); });
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     status.hidden = true; statusErr.hidden = true;
     let first = null;
@@ -1725,9 +1814,18 @@ const BOOKING_URL = "https://calendar.app.google/M7GVu7BDJ28tkuAg7";
     if ((honey && honey.value) || !tStart || Date.now() - tStart < 3000) { status.hidden = false; return; }
     const btn = form.querySelector('button[type="submit"]');
     if (btn.getAttribute('aria-busy') === 'true') return;
+    if (srcMode() === 'file' && UPLOAD_ENDPOINT) {
+      const m = fileError(fFile.files[0]);
+      if (m) { eFile.innerHTML = `<i class="ph ph-warning-circle" aria-hidden="true"></i>${m}`; fFile.focus(); return; }
+    } else if (srcMode() === 'file') { setMode('link'); document.getElementById('f-lien').focus(); return; }
     btn.setAttribute('aria-busy', 'true');
-    const label = btn.textContent; btn.textContent = 'Envoi en cours…';
+    const label = btn.textContent; btn.textContent = srcMode() === 'file' ? 'Envoi de la vidéo…' : 'Envoi en cours…';
+    if (srcMode() === 'file') {
+      try { document.getElementById('f-fichier').value = await uploadFile(fFile.files[0]); }
+      catch (err) { btn.removeAttribute('aria-busy'); btn.textContent = label; statusErr.hidden = false; return; }
+    }
     const data = Object.fromEntries(new FormData(form));
+    if (srcMode() === 'file') delete data.video; else delete data.fichier;
     delete data._next;
     data._subject = `Vidéo offerte : ${data.organisme.trim()}` + (data.offre ? ` (${data.offre})` : '');
     if (!data.offre) delete data.offre;
