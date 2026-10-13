@@ -44,6 +44,9 @@
 .ph.ph-arrow-up-right:before {
   content: "\e092";
 }
+.ph.ph-chat-circle-text:before {
+  content: "\e16e";
+}
 .ph.ph-check:before {
   content: "\e182";
 }
@@ -65,11 +68,23 @@
 .ph.ph-file-text:before {
   content: "\e23a";
 }
+.ph.ph-film-strip:before {
+  content: "\e792";
+}
+.ph.ph-gift:before {
+  content: "\e276";
+}
+.ph.ph-hand-coins:before {
+  content: "\ea8c";
+}
 .ph.ph-infinity:before {
   content: "\e634";
 }
 .ph.ph-lightbulb:before {
   content: "\e2dc";
+}
+.ph.ph-link:before {
+  content: "\e2e2";
 }
 .ph.ph-linkedin-logo:before {
   content: "\e2ee";
@@ -77,8 +92,14 @@
 .ph.ph-list:before {
   content: "\e2f0";
 }
+.ph.ph-lock-key:before {
+  content: "\e2fe";
+}
 .ph.ph-microphone:before {
   content: "\e326";
+}
+.ph.ph-microphone-stage:before {
+  content: "\e75c";
 }
 .ph.ph-note-pencil:before {
   content: "\e34c";
@@ -98,14 +119,26 @@
 .ph.ph-plus:before {
   content: "\e3d4";
 }
+.ph.ph-scissors:before {
+  content: "\eae0";
+}
+.ph.ph-seal-check:before {
+  content: "\e606";
+}
 .ph.ph-speaker-high:before {
   content: "\e44a";
 }
 .ph.ph-speaker-slash:before {
   content: "\e45a";
 }
+.ph.ph-stack:before {
+  content: "\e466";
+}
 .ph.ph-subtitles:before {
   content: "\e1a8";
+}
+.ph.ph-timer:before {
+  content: "\e492";
 }
 .ph.ph-upload-simple:before {
   content: "\e4c0";
